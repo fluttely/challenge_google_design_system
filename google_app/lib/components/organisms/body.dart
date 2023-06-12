@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
-class BodyTile extends StatelessWidget {
-  const BodyTile({super.key});
+class Body extends StatelessWidget {
+  const Body({super.key});
 
   @override
   Widget build(BuildContext context) {

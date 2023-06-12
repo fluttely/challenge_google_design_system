@@ -21,7 +21,12 @@ class GoogleApp extends widgets.InheritedWidget {
             key: key,
             debugShowCheckedModeBanner: false,
             title: title,
-            theme: material.ThemeData(useMaterial3: true),
+            theme: material.ThemeData(
+              useMaterial3: true,
+              colorScheme: material.ColorScheme.fromSeed(
+                seedColor: Colors().seedColor,
+              ),
+            ),
             home: home,
           ),
         );

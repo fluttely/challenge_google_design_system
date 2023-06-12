@@ -1,33 +1,30 @@
-import 'package:flutter/material.dart' as material;
-import 'package:flutter/widgets.dart' hide Icon, IconData;
+import 'package:flutter/widgets.dart' as widgets hide Icon, IconData;
 import 'package:google_app/google_app.dart';
 
 void main() {
-  runApp(const MyApp());
+  widgets.runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends widgets.StatelessWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  widgets.Widget build(widgets.BuildContext context) {
     return GoogleApp(
       title: 'Google Drive',
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const HomePage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+class HomePage extends widgets.StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  widgets.State<HomePage> createState() => _HomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _HomePageState extends widgets.State<HomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
@@ -37,36 +34,13 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   @override
-  Widget build(BuildContext ctx) {
-    return material.Scaffold(
-      appBar: material.AppBar(
-        backgroundColor: ctx.theme.colors.backgroundColor,
-        //  material.Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
+  widgets.Widget build(widgets.BuildContext ctx) {
+    return Scaffold(
+      logo: widgets.Image.network(
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/1024px-Google_Drive_logo.png',
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: material.Theme.of(ctx).textTheme.headlineMedium,
-            ),
-            // Icons.
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: _incrementCounter,
-        icon: Icon.medium(GoogleApp.of(ctx).designSystem.theme.icons.add),
-        label: const Text('somar'),
-        backgroundColor:
-            GoogleApp.of(ctx).designSystem.theme.colors.backgroundColor,
-        // const material.Icon(material.Icons.add),
-      ),
+      title: 'Drive',
+      bodyList: const [],
     );
   }
 }

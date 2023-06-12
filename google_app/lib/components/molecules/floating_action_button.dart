@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart' as material hide IconData;
-import 'package:flutter/widgets.dart' as widgets;
+import 'package:flutter/widgets.dart' hide Text, Icon;
 import 'package:google_app/google_app.dart';
 
 class FloatingActionButton extends material.FloatingActionButton {
@@ -9,16 +9,20 @@ class FloatingActionButton extends material.FloatingActionButton {
     required super.child,
   });
 
-  const FloatingActionButton.extended({
+  FloatingActionButton.extended({
     super.key,
     required void Function()? onPressed,
-    required widgets.Text label,
-    required Icon icon,
-    widgets.Color? backgroundColor,
+    required String label,
+    required IconData icon,
+    Color? backgroundColor,
   }) : super.extended(
           onPressed: onPressed,
-          label: label,
-          icon: icon,
+          label: Text(
+            label,
+            style: const TextStyle(fontWeight: FontWeight.w500),
+          ),
+          icon: Icon(icon),
           backgroundColor: backgroundColor,
+          elevation: 2,
         );
 }
