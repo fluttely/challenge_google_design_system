@@ -1,63 +1,27 @@
 name: google_drive
 description: A new Flutter project.
-
-
 publish_to: 'none' 
-
-
-
-
-
-
-
-
-
-
-
-
-
 version: 1.0.0+1
 
 environment:
   sdk: '>=3.1.0-195.0.dev <4.0.0'
 
-
-
-
-
-
-
 dependencies:
   flutter:
     sdk: flutter
-
   google_app:
     path: ../google_app
-
-  
-  
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  
-  
-  
-  
-  
   flutter_lints: ^2.0.0
 
-
-
-
-
 flutter:
+  assets:
+    - assets/images/google_drive_logo.png
 
-  
-  
-  
   uses-material-design: true
 
   

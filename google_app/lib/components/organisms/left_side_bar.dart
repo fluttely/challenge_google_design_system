@@ -33,15 +33,9 @@ class LeftSideBar extends StatelessWidget {
         const SizedBox(height: 16),
         ...leftSideBarTileList
             .map(
-              (element) => Padding(
-                padding: const EdgeInsets.symmetric(
-                  // horizontal: 16,
-                  vertical: 4,
-                ),
-                child: LeftSideBarTile(
-                  icon: element.icon,
-                  title: element.title,
-                ),
+              (element) => LeftSideBarTile(
+                icon: element.icon,
+                title: element.title,
               ),
             )
             .toList(),

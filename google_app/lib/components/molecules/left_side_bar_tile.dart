@@ -17,36 +17,29 @@ class LeftSideBarTile extends StatefulWidget {
 }
 
 class _LeftSideBarTileState extends State<LeftSideBarTile> {
-  bool isHover = false;
   bool isSelected = false;
 
   @override
   Widget build(BuildContext context) {
     return material.InkWell(
+      borderRadius: const BorderRadius.all(Radius.circular(16)),
       onTap: () {
-        isSelected = true;
+        setState(() {
+          isSelected = true;
+        });
       },
-      child: MouseRegion(
-        onEnter: (_) => setState(() {
-          isHover = true;
-        }),
-        onExit: (_) => setState(() {
-          isHover = false;
-        }),
-        child: Container(
-          color: isSelected
-              ? Colors().seedColor
-              : isHover
-                  ? Colors().disabledColor
-                  : null,
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Row(
-            children: [
-              Icon(widget.icon),
-              const SizedBox(width: 16),
-              Text(widget.title),
-            ],
-          ),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(Radius.circular(16)),
+          color: isSelected ? Colors().seedColor : null,
+        ),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+        child: Row(
+          children: [
+            Icon(widget.icon),
+            const SizedBox(width: 16),
+            Text(widget.title),
+          ],
         ),
       ),
     );

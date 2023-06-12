@@ -19,7 +19,7 @@ class FloatingActionButton extends material.FloatingActionButton {
           onPressed: onPressed,
           label: Text(
             label,
-            style: const TextStyle(fontWeight: FontWeight.w500),
+            fontWeight: FontWeight.w500,
           ),
           icon: Icon(icon),
           backgroundColor: backgroundColor,

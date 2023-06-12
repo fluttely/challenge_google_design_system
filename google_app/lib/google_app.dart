@@ -26,6 +26,7 @@ class GoogleApp extends widgets.InheritedWidget {
               colorScheme: material.ColorScheme.fromSeed(
                 seedColor: Colors().seedColor,
               ),
+              hoverColor: Colors().disabledColor,
             ),
             home: home,
           ),

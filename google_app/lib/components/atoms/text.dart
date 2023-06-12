@@ -1,11 +1,24 @@
 import 'package:flutter/material.dart' as material hide IconData;
+import 'package:google_app/google_app.dart';
 
 class Text extends material.Text {
-  const Text(
+  Text(
     super.data, {
     super.key,
-    super.style,
+    material.Color? fontColor,
+    double? fontSize,
+    material.FontWeight? fontWeight,
   }) : super(
-        // style: const material.TextStyle(color: material.Colors.black), // TODO
-        );
+            style: material.TextStyle(
+          color: fontColor ?? Colors().textColor,
+          fontSize: fontSize ?? 14,
+          fontWeight: fontWeight ?? material.FontWeight.w300,
+        ));
+
+  factory Text.titleLarge(String data) => Text(
+        data,
+        fontColor: Colors().titleLargeColor,
+        fontSize: 22,
+        fontWeight: material.FontWeight.w400,
+      );
 }

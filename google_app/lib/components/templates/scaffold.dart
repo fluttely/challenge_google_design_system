@@ -34,6 +34,7 @@ final leftSideBarTileList = [
 class Scaffold extends StatelessWidget {
   final Image logo;
   final String title;
+
   final List<BodyTile> bodyList;
 
   const Scaffold({
@@ -49,24 +50,24 @@ class Scaffold extends StatelessWidget {
       backgroundColor: Colors().canvasColor,
       appBar: AppBar(
         image: SizedBox(height: 40, child: logo),
-        title: Text(title),
+        title: title,
       ),
       body: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          Container(
-            width: 216, // TODO
-            padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
-            child: LeftSideBar(
-              floatingActionButton: FloatingActionButton.extended(
-                onPressed: () {},
-                label: 'New', // TODO
-                icon: Icons().add,
-                backgroundColor: Colors().bodyColor,
-              ),
-              leftSideBarTileList: leftSideBarTileList,
-            ),
-          ),
+          // Container( // TODO: PUT IT BACK
+          //   width: 216, // TODO
+          //   padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
+          //   child: LeftSideBar(
+          //     floatingActionButton: FloatingActionButton.extended(
+          //       onPressed: () {},
+          //       label: 'New', // TODO
+          //       icon: Icons().add,
+          //       backgroundColor: Colors().bodyColor,
+          //     ),
+          //     leftSideBarTileList: leftSideBarTileList,
+          //   ),
+          // ),
           Expanded(
             child: Container(
               decoration: BoxDecoration(

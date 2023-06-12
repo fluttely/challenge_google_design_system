@@ -25,19 +25,11 @@ class HomePage extends widgets.StatefulWidget {
 }
 
 class _HomePageState extends widgets.State<HomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   widgets.Widget build(widgets.BuildContext ctx) {
     return Scaffold(
-      logo: widgets.Image.network(
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/1024px-Google_Drive_logo.png',
+      logo: widgets.Image.asset(
+        'assets/images/google_drive_logo.png',
       ),
       title: 'Drive',
       bodyList: const [],
