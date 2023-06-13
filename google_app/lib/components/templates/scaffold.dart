@@ -55,28 +55,21 @@ class Scaffold extends StatelessWidget {
       body: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          // Container( // TODO: PUT IT BACK
-          //   width: 216, // TODO
-          //   padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
-          //   child: LeftSideBar(
-          //     floatingActionButton: FloatingActionButton.extended(
-          //       onPressed: () {},
-          //       label: 'New', // TODO
-          //       icon: Icons().add,
-          //       backgroundColor: Colors().bodyColor,
-          //     ),
-          //     leftSideBarTileList: leftSideBarTileList,
-          //   ),
-          // ),
-          Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors().bodyColor,
-                borderRadius: const BorderRadius.all(Radius.circular(16)),
+          Container(
+            // TODO: PUT IT BACK
+            width: 216, // TODO
+            padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
+            child: LeftSideBar(
+              floatingActionButton: FloatingActionButton.extended(
+                onPressed: () {},
+                label: 'New', // TODO
+                icon: Icons().add,
+                backgroundColor: Colors().bodyColor,
               ),
-              child: Container(),
+              leftSideBarTileList: leftSideBarTileList,
             ),
           ),
+          const Expanded(child: Body()),
         ],
       ),
     );
