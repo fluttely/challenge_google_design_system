@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart' as material;
-import 'package:flutter/widgets.dart';
+import 'package:flutter/widgets.dart' hide Text;
 import 'package:google_app/google_app.dart';
 
 class Body extends StatelessWidget {
-  const Body({super.key});
+  final List<BodyTile> bodyTileList;
+
+  const Body({
+    super.key,
+    required this.bodyTileList,
+  });
 
   @override
   Widget build(BuildContext context) {
-    // padding: const material.EdgeInsets.symmetric(
-    //           horizontal: 14,
-    //           vertical: 6,
-    //         ),
     return material.Padding(
       padding: const material.EdgeInsets.fromLTRB(
         14,
@@ -19,17 +20,58 @@ class Body extends StatelessWidget {
         4,
       ),
       child: material.Card(
-        margin: const material.EdgeInsets.all(0),
+        elevation: 0,
         color: Colors().bodyColor,
-        child: Container(),
+        child: material.Padding(
+          padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 18.0),
+          child: material.Column(
+            children: [
+              material.Row(
+                children: [
+                  FloatingActionButton.extended(
+                    elevation: 0,
+                    backgroundColor: Colors().seedColor,
+                    onPressed: () {},
+                    // child: Text(''),
+                    label: 'My Drive', // TODO
+                    // icon: Icons().add,
+                  ),
+                  const material.Spacer(),
+                  material.IconButton(
+                    icon: const material.Icon(
+                      material.Icons.label_off_outlined,
+                      size: 20,
+                    ),
+                    onPressed: () {},
+                  ),
+                  const material.SizedBox(width: 4),
+                  material.IconButton(
+                    icon: const material.Icon(
+                      material.Icons.backup_sharp,
+                      size: 20,
+                    ),
+                    onPressed: () {},
+                  ),
+                  const material.SizedBox(width: 4),
+                  material.IconButton(
+                    icon: const material.Icon(
+                      material.Icons.info_outline_rounded,
+                      size: 20,
+                    ),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+              const material.SizedBox(height: 24),
+              material.Expanded(
+                child: ListView(
+                  children: bodyTileList.map((element) => element).toList(),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
-    // Container(
-    //   decoration: BoxDecoration(
-    //     color: Colors().green,
-    //     borderRadius: const BorderRadius.all(Radius.circular(16)),
-    //   ),
-    //   child: Container(),
-    // );
   }
 }

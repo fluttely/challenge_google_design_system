@@ -12,4 +12,8 @@ class Icons {
   widgets.IconData report_outlined = material.Icons.report_outlined;
   widgets.IconData delete_outline_rounded =
       material.Icons.delete_outline_rounded;
+
+  widgets.IconData more_vert = material.Icons.more_vert;
+  widgets.IconData folder_shared_rounded = material.Icons.folder_shared_rounded;
+  widgets.IconData folder = material.Icons.folder;
 }

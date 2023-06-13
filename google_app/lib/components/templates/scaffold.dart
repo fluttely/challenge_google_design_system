@@ -1,47 +1,20 @@
 import 'package:flutter/material.dart' as material hide IconData;
 import 'package:flutter/widgets.dart' hide Text;
-import 'package:google_app/components/molecules/body_tile.dart';
-import 'package:google_app/components/organisms/left_side_bar.dart';
 import 'package:google_app/google_app.dart';
-
-final leftSideBarTileList = [
-  LeftSideBarTileModel(
-    icon: Icons().add_to_drive_outlined,
-    title: 'My Drive',
-  ),
-  LeftSideBarTileModel(
-    icon: Icons().computer,
-    title: 'Computers',
-  ),
-  LeftSideBarTileModel(
-    icon: Icons().people_alt_outlined,
-    title: 'Shared With Me',
-  ),
-  LeftSideBarTileModel(
-    icon: Icons().star_border_outlined,
-    title: 'Starred',
-  ),
-  LeftSideBarTileModel(
-    icon: Icons().report_outlined,
-    title: 'Spam',
-  ),
-  LeftSideBarTileModel(
-    icon: Icons().delete_outline_rounded,
-    title: 'Trash',
-  ),
-];
 
 class Scaffold extends StatelessWidget {
   final Image logo;
   final String title;
 
-  final List<BodyTile> bodyList;
+  final List<LeftSideBarTileModel> leftSideBarTileList;
+  final List<BodyTile> bodyTileList;
 
   const Scaffold({
     super.key,
     required this.logo,
     required this.title,
-    required this.bodyList,
+    required this.leftSideBarTileList,
+    required this.bodyTileList,
   });
 
   @override
@@ -56,7 +29,6 @@ class Scaffold extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           Container(
-            // TODO: PUT IT BACK
             width: 216, // TODO
             padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
             child: LeftSideBar(
@@ -69,7 +41,7 @@ class Scaffold extends StatelessWidget {
               leftSideBarTileList: leftSideBarTileList,
             ),
           ),
-          const Expanded(child: Body()),
+          Expanded(child: Body(bodyTileList: bodyTileList)),
         ],
       ),
     );

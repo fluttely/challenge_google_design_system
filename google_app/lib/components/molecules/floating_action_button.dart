@@ -13,16 +13,17 @@ class FloatingActionButton extends material.FloatingActionButton {
     super.key,
     required void Function()? onPressed,
     required String label,
-    required IconData icon,
+    IconData? icon,
     Color? backgroundColor,
+    double? elevation,
   }) : super.extended(
           onPressed: onPressed,
           label: Text(
             label,
             fontWeight: FontWeight.w500,
           ),
-          icon: Icon(icon),
+          icon: icon != null ? Icon(icon) : null,
           backgroundColor: backgroundColor,
-          elevation: 2,
+          elevation: elevation ?? 2,
         );
 }
