@@ -10,14 +10,14 @@ class Text extends material.Text {
     material.FontWeight? fontWeight,
   }) : super(
             style: material.TextStyle(
-          color: fontColor ?? Colors().textColor,
+          color: fontColor ?? Colors.textColor,
           fontSize: fontSize ?? 14,
           fontWeight: fontWeight ?? material.FontWeight.w300,
         ));
 
   factory Text.titleLarge(String data) => Text(
         data,
-        fontColor: Colors().titleLargeColor,
+        fontColor: Colors.titleLargeColor,
         fontSize: 22,
         fontWeight: material.FontWeight.w400,
       );

@@ -1,30 +1,29 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/widgets.dart' as widgets hide Icon, IconData;
 import 'package:google_app/google_app.dart';
 
 final List<LeftSideBarTileModel> leftSideBarTileList = [
   LeftSideBarTileModel(
-    icon: Icons().add_to_drive_outlined,
+    icon: Icons.add_to_drive_outlined,
     title: 'My Drive',
   ),
   LeftSideBarTileModel(
-    icon: Icons().computer,
+    icon: Icons.computer,
     title: 'Computers',
   ),
   LeftSideBarTileModel(
-    icon: Icons().people_alt_outlined,
+    icon: Icons.people_alt_outlined,
     title: 'Shared With Me',
   ),
   LeftSideBarTileModel(
-    icon: Icons().star_border_outlined,
+    icon: Icons.star_border_outlined,
     title: 'Starred',
   ),
   LeftSideBarTileModel(
-    icon: Icons().report_outlined,
+    icon: Icons.report_outlined,
     title: 'Spam',
   ),
   LeftSideBarTileModel(
-    icon: Icons().delete_outline_rounded,
+    icon: Icons.delete_outline_rounded,
     title: 'Trash',
   ),
 ];
@@ -87,13 +86,19 @@ void main() {
     GoogleApp(
       title: 'Google Drive',
       home: Scaffold(
-        logo: widgets.Image.asset(
-          'assets/images/google_drive_logo.png',
-        ),
+        logo: widgets.Image.asset('assets/images/google_drive_logo.png'),
         title: 'Drive',
-        leftSideBarTileList: leftSideBarTileList,
+        leftSideBar: LeftSideBar(
+          floatingActionButton: FloatingActionButton.extended(
+            onPressed: () {},
+            label: 'New',
+            icon: Icons.add,
+            backgroundColor: Colors.bodyColor,
+          ),
+          leftSideBarTileList: leftSideBarTileList,
+        ),
         bodyTileList: foldersList
-            .map((element) => BodyTile(
+            .map((element) => GDriveBodyTile(
                   isSelected: element.folderOwner.name != 'Kevin',
                   dateFormatted: element.lastModified.year.toString(),
                   folderName: element.folderName,

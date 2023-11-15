@@ -22,7 +22,7 @@ class FloatingActionButton extends material.FloatingActionButton {
             label,
             fontWeight: FontWeight.w500,
           ),
-          icon: icon != null ? Icon(icon) : null,
+          icon: icon != null ? Icon(icon,  size: 24) : null,
           backgroundColor: backgroundColor,
           elevation: elevation ?? 2,
         );

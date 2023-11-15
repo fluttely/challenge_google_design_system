@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart' hide Text;
 import 'package:google_app/google_app.dart';
 
 class Body extends StatelessWidget {
-  final List<BodyTile> bodyTileList;
+  final List<GDriveBodyTile> bodyTileList;
 
   const Body({
     super.key,
@@ -21,21 +21,13 @@ class Body extends StatelessWidget {
       ),
       child: material.Card(
         elevation: 0,
-        color: Colors().bodyColor,
+        color: Colors.bodyColor,
         child: material.Padding(
           padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 18.0),
           child: material.Column(
             children: [
               material.Row(
                 children: [
-                  FloatingActionButton.extended(
-                    elevation: 0,
-                    backgroundColor: Colors().seedColor,
-                    onPressed: () {},
-                    // child: Text(''),
-                    label: 'My Drive', // TODO
-                    // icon: Icons().add,
-                  ),
                   const material.Spacer(),
                   material.IconButton(
                     icon: const material.Icon(

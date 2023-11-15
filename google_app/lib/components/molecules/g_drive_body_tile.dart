@@ -2,7 +2,7 @@ import 'package:flutter/material.dart' as material;
 import 'package:flutter/widgets.dart' hide Text, Icon;
 import 'package:google_app/google_app.dart';
 
-class BodyTile extends StatelessWidget {
+class GDriveBodyTile extends StatelessWidget {
   final bool isShared;
   final bool isSelected;
   final String folderName;
@@ -10,7 +10,7 @@ class BodyTile extends StatelessWidget {
   final String dateFormatted;
   final String folderSizeFormatted;
 
-  const BodyTile({
+  const GDriveBodyTile({
     super.key,
     required this.isShared,
     required this.isSelected,
@@ -25,13 +25,13 @@ class BodyTile extends StatelessWidget {
     return material.ListTile(
       shape: material.Border.symmetric(
         horizontal: BorderSide(
-          color: Colors().lineColor,
+          color: Colors.lineColor,
           width: 0.5,
         ),
       ),
       selected: isShared,
-      selectedTileColor: Colors().seedColor,
-      tileColor: Colors().bodyColor,
+      selectedTileColor: Colors.seedColor,
+      tileColor: Colors.bodyColor,
       contentPadding: const EdgeInsets.symmetric(horizontal: 18),
       title: Row(
         children: [
@@ -39,8 +39,8 @@ class BodyTile extends StatelessWidget {
             flex: 3,
             child: Row(children: [
               isShared
-                  ? Icon.large(Icons().folder_shared_rounded)
-                  : Icon.large(Icons().folder),
+                  ? Icon.large(Icons.folder_shared_rounded)
+                  : Icon.large(Icons.folder),
               const SizedBox(width: 12),
               Text(folderName),
             ]),
@@ -61,7 +61,7 @@ class BodyTile extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(folderSizeFormatted),
-                  Icon(Icons().more_vert),
+                  Icon(Icons.more_vert),
                 ]),
           ),
         ],

@@ -14,14 +14,14 @@ class Colors {
   static widgets.Color grey400 = material.Colors.grey.shade400;
 
   /// Theme Colors
-  widgets.Color backgroundColor = blue;
-  widgets.Color titleLargeColor = darkGrey800;
-  widgets.Color canvasColor = const widgets.Color(0xFFf6f9fc);
-  widgets.Color textColor = darkGrey800;
-  widgets.Color iconColor = darkGrey700;
-  widgets.Color lineColor = grey400;
-  widgets.Color bodyColor = white;
-  widgets.Color seedColor = const widgets.Color(0xFFc1e6fe);
-  widgets.Color disabledColor = const widgets.Color(0xFFe6e7ea);
-  widgets.Color searchAnchorBarColor = const widgets.Color(0xFFecf2fc);
+  static widgets.Color backgroundColor = blue;
+  static widgets.Color titleLargeColor = darkGrey800;
+  static widgets.Color canvasColor = const widgets.Color(0xFFf6f9fc);
+  static widgets.Color textColor = darkGrey800;
+  static widgets.Color iconColor = darkGrey700;
+  static widgets.Color lineColor = grey400;
+  static widgets.Color bodyColor = white;
+  static widgets.Color seedColor = const widgets.Color(0xFFc1e6fe);
+  static widgets.Color disabledColor = const widgets.Color(0xFFe6e7ea);
+  static widgets.Color searchAnchorBarColor = const widgets.Color(0xFFecf2fc);
 }

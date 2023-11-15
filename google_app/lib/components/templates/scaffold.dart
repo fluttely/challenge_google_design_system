@@ -5,22 +5,21 @@ import 'package:google_app/google_app.dart';
 class Scaffold extends StatelessWidget {
   final Image logo;
   final String title;
-
-  final List<LeftSideBarTileModel> leftSideBarTileList;
-  final List<BodyTile> bodyTileList;
+  final LeftSideBar leftSideBar;
+  final List<GDriveBodyTile> bodyTileList;
 
   const Scaffold({
     super.key,
     required this.logo,
     required this.title,
-    required this.leftSideBarTileList,
+    required this.leftSideBar,
     required this.bodyTileList,
   });
 
   @override
   Widget build(BuildContext context) {
     return material.Scaffold(
-      backgroundColor: Colors().canvasColor,
+      backgroundColor: Colors.canvasColor,
       appBar: AppBar(
         image: SizedBox(height: 40, child: logo),
         title: title,
@@ -31,15 +30,7 @@ class Scaffold extends StatelessWidget {
           Container(
             width: 216, // TODO
             padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
-            child: LeftSideBar(
-              floatingActionButton: FloatingActionButton.extended(
-                onPressed: () {},
-                label: 'New', // TODO
-                icon: Icons().add,
-                backgroundColor: Colors().bodyColor,
-              ),
-              leftSideBarTileList: leftSideBarTileList,
-            ),
+            child: leftSideBar,
           ),
           Expanded(child: Body(bodyTileList: bodyTileList)),
         ],

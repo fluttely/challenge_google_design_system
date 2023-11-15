@@ -15,7 +15,7 @@ class Icon extends widgets.Icon {
     super.key,
     double? size,
   }) : super(
-          color: Colors().iconColor,
+          color: Colors.iconColor,
           size: size ?? 20,
         );
 
