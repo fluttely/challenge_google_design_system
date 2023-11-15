@@ -82,6 +82,20 @@ final List<FolderModel> foldersList = [
 ];
 
 void main() {
+  for (int i = 0; i < 20; i++) {
+    foldersList.add(
+      FolderModel(
+        folderName: 'Lorem',
+        folderOwner: UserModel(
+          email: 'loren@ipsum.com',
+          name: 'Lorem Ipsum',
+        ),
+        lastModified: DateTime.now(),
+        usersShared: [],
+        fileSize: 2.7,
+      ),
+    );
+  }
   widgets.runApp(
     GoogleApp(
       title: 'Google Drive',
@@ -98,18 +112,19 @@ void main() {
           leftSideBarTileList: leftSideBarTileList,
         ),
         bodyTileList: foldersList
-            .map((element) => GDriveBodyTile(
-                  isSelected: element.folderOwner.name != 'Kevin',
-                  dateFormatted: element.lastModified.year.toString(),
-                  folderName: element.folderName,
-                  isShared: element.usersShared.isNotEmpty,
-                  folderSizeFormatted: element.fileSize != null
-                      ? '${element.fileSize} GB'
-                      : '--',
-                  folderOwnerName: element.folderOwner.name == 'Kevin'
-                      ? 'me'
-                      : element.folderOwner.name,
-                ))
+            .map(
+              (element) => DriveBodyTile(
+                isSelected: element.folderOwner.name != 'Kevin',
+                dateFormatted: element.lastModified.year.toString(),
+                folderName: element.folderName,
+                isShared: element.usersShared.isNotEmpty,
+                folderSizeFormatted:
+                    element.fileSize != null ? '${element.fileSize} GB' : '--',
+                folderOwnerName: element.folderOwner.name == 'Kevin'
+                    ? 'me'
+                    : element.folderOwner.name,
+              ),
+            )
             .toList(),
       ),
     ),

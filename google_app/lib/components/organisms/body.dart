@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart' hide Text;
 import 'package:google_app/google_app.dart';
 
 class Body extends StatelessWidget {
-  final List<GDriveBodyTile> bodyTileList;
+  final List<Widget> bodyTileList;
 
   const Body({
     super.key,

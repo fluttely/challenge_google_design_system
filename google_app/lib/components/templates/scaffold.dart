@@ -6,7 +6,7 @@ class Scaffold extends StatelessWidget {
   final Image logo;
   final String title;
   final LeftSideBar leftSideBar;
-  final List<GDriveBodyTile> bodyTileList;
+  final List<Widget> bodyTileList;
 
   const Scaffold({
     super.key,

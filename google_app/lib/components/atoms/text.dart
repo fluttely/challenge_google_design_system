@@ -10,6 +10,7 @@ class Text extends material.Text {
     material.FontWeight? fontWeight,
   }) : super(
             style: material.TextStyle(
+              overflow: material.TextOverflow.ellipsis,
           color: fontColor ?? Colors.textColor,
           fontSize: fontSize ?? 14,
           fontWeight: fontWeight ?? material.FontWeight.w300,

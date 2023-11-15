@@ -4,7 +4,7 @@ import 'package:google_app/google_app.dart';
 final List<LeftSideBarTileModel> leftSideBarTileList = [
   LeftSideBarTileModel(
     icon: Icons.inbox,
-    title: 'My Gmail',
+    title: 'Inbox',
   ),
   LeftSideBarTileModel(
     icon: Icons.star_border_outlined,
@@ -28,19 +28,21 @@ final List<LeftSideBarTileModel> leftSideBarTileList = [
   ),
 ];
 
-class FolderModel {
-  final List<UserModel> usersShared;
-  final String folderName;
-  final UserModel folderOwner;
-  final DateTime lastModified;
-  final double? fileSize;
+class InboxTileModel {
+  final bool starred;
+  final UserModel senderData;
+  final UserModel receiverData;
+  final DateTime sendedDate;
+  final String subject;
+  final String description;
 
-  FolderModel({
-    required this.usersShared,
-    required this.folderName,
-    required this.folderOwner,
-    required this.lastModified,
-    this.fileSize,
+  InboxTileModel({
+    required this.starred,
+    required this.senderData,
+    required this.receiverData,
+    required this.sendedDate,
+    required this.subject,
+    required this.description,
   });
 }
 
@@ -54,34 +56,56 @@ class UserModel {
   });
 }
 
-final List<FolderModel> foldersList = [
-  FolderModel(
-    folderName: 'Git Lab',
-    folderOwner: UserModel(
+final List<InboxTileModel> inboxList = [
+  InboxTileModel(
+    subject: 'IBM Careers',
+    description: 'How attackers can capitalise on generative AI...',
+    starred: false,
+    senderData: UserModel(
+      email: 'contact@ibm.com',
+      name: 'IBM',
+    ),
+    sendedDate: DateTime.now(),
+    receiverData: UserModel(
       email: 'kevin@gmail.com',
       name: 'Kevin',
     ),
-    lastModified: DateTime.now(),
-    usersShared: [
-      UserModel(
-        email: 'joao.victor@gmail.com',
-        name: 'João Victor',
-      ),
-    ],
   ),
-  FolderModel(
-    folderName: 'draw.io',
-    folderOwner: UserModel(
-      email: 'joao.victor@gmail.com',
-      name: 'João Victor',
+  InboxTileModel(
+    subject: 'LinkedIn',
+    description: 'Alert about a new job...',
+    starred: true,
+    senderData: UserModel(
+      email: 'contact@nubank.com',
+      name: 'Nubank',
     ),
-    lastModified: DateTime.now(),
-    usersShared: [],
-    fileSize: 2.7,
+    sendedDate: DateTime.now(),
+    receiverData: UserModel(
+      email: 'kevin@gmail.com',
+      name: 'Kevin',
+    ),
   ),
 ];
 
 void main() {
+  for (int i = 0; i < 20; i++) {
+    inboxList.add(
+      InboxTileModel(
+        subject: 'Amet',
+        description: 'Lorem ipsum dolor sit amet...',
+        starred: false,
+        senderData: UserModel(
+          email: 'lorem@ipsum.com',
+          name: 'Lorem',
+        ),
+        sendedDate: DateTime.now(),
+        receiverData: UserModel(
+          email: 'kevin@gmail.com',
+          name: 'Kevin',
+        ),
+      ),
+    );
+  }
   widgets.runApp(
     GoogleApp(
       title: 'Google Gmail',
@@ -94,22 +118,16 @@ void main() {
             backgroundColor: Colors.seedColor,
             onPressed: () {},
             icon: Icons.edit_outlined,
-            label: 'Write',
+            label: 'Compose',
           ),
           leftSideBarTileList: leftSideBarTileList,
         ),
-        bodyTileList: foldersList
-            .map((element) => GDriveBodyTile(
-                  isSelected: element.folderOwner.name != 'Kevin',
-                  dateFormatted: element.lastModified.year.toString(),
-                  folderName: element.folderName,
-                  isShared: element.usersShared.isNotEmpty,
-                  folderSizeFormatted: element.fileSize != null
-                      ? '${element.fileSize} GB'
-                      : '--',
-                  folderOwnerName: element.folderOwner.name == 'Kevin'
-                      ? 'me'
-                      : element.folderOwner.name,
+        bodyTileList: inboxList
+            .map((element) => MailBodyTile(
+                  subject: element.subject,
+                  description: element.description,
+                  starred: element.starred,
+                  dateFormatted: element.sendedDate.year.toString(),
                 ))
             .toList(),
       ),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart' as material;
 import 'package:flutter/widgets.dart' hide Text, Icon;
 import 'package:google_app/google_app.dart';
 
-class GDriveBodyTile extends StatelessWidget {
+class DriveBodyTile extends StatelessWidget {
   final bool isShared;
   final bool isSelected;
   final String folderName;
@@ -10,7 +10,7 @@ class GDriveBodyTile extends StatelessWidget {
   final String dateFormatted;
   final String folderSizeFormatted;
 
-  const GDriveBodyTile({
+  const DriveBodyTile({
     super.key,
     required this.isShared,
     required this.isSelected,

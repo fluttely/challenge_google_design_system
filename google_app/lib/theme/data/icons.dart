@@ -12,6 +12,7 @@ class Icons {
   static widgets.IconData add_to_drive_outlined = material.Icons.add_to_drive_outlined;
   static widgets.IconData computer = material.Icons.computer;
   static widgets.IconData people_alt_outlined = material.Icons.people_alt_outlined;
+  static widgets.IconData star = material.Icons.star;
   static widgets.IconData star_border_outlined = material.Icons.star_border_outlined;
   static widgets.IconData report_outlined = material.Icons.report_outlined;
   static widgets.IconData delete_outline_rounded =
