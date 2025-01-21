@@ -1,29 +1,19 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Google Drive",
-            "request": "launch",
-            "type": "dart",
-            "program": "google_drive/lib/main.dart",
-            "args": [
-                "-d",
-                "chrome",
-                "--web-renderer",
-                "html",
-            ],
-        },
-        {
-            "name": "Google Gmail",
-            "request": "launch",
-            "type": "dart",
-            "program": "google_mail/lib/main.dart",
-            "args": [
-                "-d",
-                "chrome",
-                "--web-renderer",
-                "html",
-            ],
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Google Drive",
+      "request": "launch",
+      "type": "dart",
+      "program": "google_drive/lib/main.dart",
+      "args": ["-d", "chrome", "--web-renderer", "canvaskit"]
+    },
+    {
+      "name": "Google Gmail",
+      "request": "launch",
+      "type": "dart",
+      "program": "google_mail/lib/main.dart",
+      "args": ["-d", "chrome", "--web-renderer", "html"]
+    }
+  ]
 }

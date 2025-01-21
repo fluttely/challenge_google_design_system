@@ -4,9 +4,9 @@ export 'data/data.dart';
 
 class Theme {
   final Icons icons;
-  final Colors colors;
+  final ColorsUtils colors;
 
   Theme()
       : icons = Icons(),
-        colors = Colors();
+        colors = ColorsUtils();
 }

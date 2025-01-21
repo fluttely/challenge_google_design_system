@@ -21,11 +21,11 @@ class MailBodyTile extends StatelessWidget {
     return material.ListTile(
       shape: material.Border.symmetric(
         horizontal: BorderSide(
-          color: Colors.lineColor,
+          color: ColorsUtils.lineColor,
           width: 0.5,
         ),
       ),
-      tileColor: Colors.bodyColor,
+      tileColor: ColorsUtils.bodyColor,
       contentPadding: const EdgeInsets.symmetric(horizontal: 18),
       dense: true,
       title: Column(

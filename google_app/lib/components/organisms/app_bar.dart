@@ -9,7 +9,7 @@ class AppBar extends material.AppBar {
     required String title,
   }) : super(
           toolbarHeight: 64,
-          backgroundColor: Colors.canvasColor,
+          backgroundColor: ColorsUtils.canvasColor,
           leadingWidth: 216,
           titleSpacing: 0,
           leading: widgets.Row(
@@ -29,10 +29,10 @@ class AppBar extends material.AppBar {
               viewElevation: 0,
               barElevation: material.MaterialStateProperty.all(0),
               barBackgroundColor: material.MaterialStateProperty.all(
-                Colors.searchAnchorBarColor,
+                ColorsUtils.searchAnchorBarColor,
               ),
               barHintText: 'Search in $title',
-              viewBackgroundColor: Colors.bodyColor,
+              viewBackgroundColor: ColorsUtils.bodyColor,
               suggestionsBuilder: (context, controller) {
                 return List.generate(
                   6,
@@ -81,17 +81,17 @@ class AppBar extends material.AppBar {
               child: material.Container(
                 padding: const material.EdgeInsets.all(2),
                 decoration: widgets.BoxDecoration(
-                  color: Colors.bodyColor,
+                  color: ColorsUtils.bodyColor,
                   shape: material.BoxShape.circle,
                 ),
                 child: material.FloatingActionButton(
-                  backgroundColor: Colors.canvasColor,
+                  backgroundColor: ColorsUtils.canvasColor,
                   shape: const material.CircleBorder(),
                   elevation: 0,
                   hoverElevation: 3,
                   onPressed: () {},
                   child: material.CircleAvatar(
-                    backgroundColor: Colors.canvasColor,
+                    backgroundColor: ColorsUtils.canvasColor,
                     backgroundImage: const material.AssetImage(
                       'assets/images/avatar_picture.png',
                     ),

@@ -11,14 +11,14 @@ class Text extends material.Text {
   }) : super(
             style: material.TextStyle(
               overflow: material.TextOverflow.ellipsis,
-          color: fontColor ?? Colors.textColor,
+          color: fontColor ?? ColorsUtils.textColor,
           fontSize: fontSize ?? 14,
           fontWeight: fontWeight ?? material.FontWeight.w300,
         ));
 
   factory Text.titleLarge(String data) => Text(
         data,
-        fontColor: Colors.titleLargeColor,
+        fontColor: ColorsUtils.titleLargeColor,
         fontSize: 22,
         fontWeight: material.FontWeight.w400,
       );

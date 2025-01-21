@@ -21,7 +21,7 @@ class Body extends StatelessWidget {
       ),
       child: material.Card(
         elevation: 0,
-        color: Colors.bodyColor,
+        color: ColorsUtils.bodyColor,
         child: material.Padding(
           padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 18.0),
           child: material.Column(

@@ -19,7 +19,7 @@ class Scaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return material.Scaffold(
-      backgroundColor: Colors.canvasColor,
+      backgroundColor: ColorsUtils.canvasColor,
       appBar: AppBar(
         image: SizedBox(height: 40, child: logo),
         title: title,

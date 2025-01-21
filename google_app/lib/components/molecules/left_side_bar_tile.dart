@@ -31,7 +31,7 @@ class _LeftSideBarTileState extends State<LeftSideBarTile> {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(16)),
-          color: isSelected ? Colors.seedColor : null,
+          color: isSelected ? ColorsUtils.seedColor : null,
         ),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
         child: Row(

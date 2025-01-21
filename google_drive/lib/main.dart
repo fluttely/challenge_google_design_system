@@ -107,7 +107,7 @@ void main() {
             onPressed: () {},
             label: 'New',
             icon: Icons.add,
-            backgroundColor: Colors.bodyColor,
+            backgroundColor: ColorsUtils.bodyColor,
           ),
           leftSideBarTileList: leftSideBarTileList,
         ),

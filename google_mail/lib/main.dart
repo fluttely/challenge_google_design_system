@@ -115,7 +115,7 @@ void main() {
         leftSideBar: LeftSideBar(
           floatingActionButton: FloatingActionButton.extended(
             elevation: 0,
-            backgroundColor: Colors.seedColor,
+            backgroundColor: ColorsUtils.seedColor,
             onPressed: () {},
             icon: Icons.edit_outlined,
             label: 'Compose',

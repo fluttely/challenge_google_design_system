@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart' as material hide IconData;
 import 'package:flutter/widgets.dart' as widgets;
 
-class Colors {
+class ColorsUtils {
   /// Generic Colors
   static widgets.Color pink = material.Colors.pink;
   static widgets.Color black = material.Colors.black;
