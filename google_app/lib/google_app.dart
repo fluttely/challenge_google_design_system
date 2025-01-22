@@ -2,24 +2,24 @@ import 'package:flutter/material.dart' as material hide IconData;
 import 'package:flutter/widgets.dart' as widgets;
 import 'package:google_app/google_app.dart';
 
-export 'components/atoms/google_icon.dart';
-export 'components/atoms/google_text.dart';
-export 'components/components.dart';
-export 'components/molecules/buttons/google_avatar_button.dart';
-export 'components/molecules/buttons/google_elevated_button.dart';
-export 'components/molecules/buttons/google_floating_action_button.dart';
-export 'components/molecules/buttons/google_icon_button.dart';
-export 'components/molecules/google_drive_body_tile.dart';
-export 'components/molecules/google_mail_body_tile.dart';
-export 'components/organisms/google_app_bar.dart';
-export 'components/organisms/google_body.dart';
-export 'components/organisms/google_left_side_bar.dart';
-export 'components/templates/google_scaffold.dart';
 export 'configuration/build_context_extension.dart';
 export 'configuration/google_design_system.dart';
-export 'theme/data/google_colors.dart';
-export 'theme/data/google_icons.dart';
-export 'theme/theme.dart';
+export 'design/foundation/theme/data/google_colors.dart';
+export 'design/foundation/theme/data/google_icons.dart';
+export 'design/foundation/theme/theme.dart';
+export 'widgets/atoms/google_icon.dart';
+export 'widgets/atoms/google_text.dart';
+export 'widgets/molecules/buttons/google_avatar_button.dart';
+export 'widgets/molecules/buttons/google_elevated_button.dart';
+export 'widgets/molecules/buttons/google_floating_action_button.dart';
+export 'widgets/molecules/buttons/google_icon_button.dart';
+export 'widgets/molecules/google_drive_body_tile.dart';
+export 'widgets/molecules/google_mail_body_tile.dart';
+export 'widgets/organisms/google_app_bar.dart';
+export 'widgets/organisms/google_body.dart';
+export 'widgets/organisms/google_left_side_bar.dart';
+export 'widgets/templates/google_scaffold.dart';
+export 'widgets/widgets.dart';
 
 class GoogleApp extends widgets.InheritedWidget {
   GoogleApp({

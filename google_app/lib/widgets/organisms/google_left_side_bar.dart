@@ -1,8 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
-import 'package:google_app/components/molecules/google_left_side_bar_tile.dart';
 import 'package:google_app/google_app.dart';
+import 'package:google_app/widgets/molecules/google_left_side_bar_tile.dart';
 
 class LeftSideBarTileModel {
   final IconData icon;
@@ -19,9 +19,9 @@ class GoogleLeftSideBar extends StatelessWidget {
   final List<LeftSideBarTileModel> leftSideBarTileList;
 
   const GoogleLeftSideBar({
-    super.key,
     required this.floatingActionButton,
     required this.leftSideBarTileList,
+    super.key,
   });
 
   @override
@@ -31,14 +31,12 @@ class GoogleLeftSideBar extends StatelessWidget {
       children: [
         floatingActionButton,
         const SizedBox(height: 16),
-        ...leftSideBarTileList
-            .map(
-              (element) => GoogleLeftSideBarTile(
-                icon: element.icon,
-                title: element.title,
-              ),
-            )
-            .toList(),
+        ...leftSideBarTileList.map(
+          (element) => GoogleLeftSideBarTile(
+            icon: element.icon,
+            title: element.title,
+          ),
+        ),
       ],
     );
   }

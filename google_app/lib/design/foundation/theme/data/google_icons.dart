@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart' as material hide IconData;
 import 'package:flutter/widgets.dart' as widgets;
-import 'package:google_app/components/components.dart';
 import 'package:google_app/google_app.dart';
 
 class GoogleIcons {
