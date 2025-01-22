@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart' as material hide IconData;
-import 'package:google_app/google_app.dart';
+import 'package:google_design_system/google_design_system.dart';
 
 class GoogleText extends material.Text {
   GoogleText(

@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart' as widgets;
-import 'package:google_app/google_app.dart';
+import 'package:google_design_system/google_design_system.dart';
 
 class GoogleIcon extends widgets.Icon {
   const GoogleIcon(

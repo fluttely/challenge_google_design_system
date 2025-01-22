@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart' as material hide IconData;
 import 'package:flutter/widgets.dart' hide Text;
-import 'package:google_app/google_app.dart';
+import 'package:google_design_system/google_design_system.dart';
 
 class GoogleScaffold extends StatelessWidget {
   const GoogleScaffold({

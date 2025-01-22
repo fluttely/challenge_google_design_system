@@ -67,10 +67,10 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  google_app:
+  google_design_system:
     dependency: "direct main"
     description:
-      path: "../google_app"
+      path: "../google_design_system"
       relative: true
     source: path
     version: "0.0.1"

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart' as material hide IconData;
 import 'package:flutter/widgets.dart' as widgets;
-import 'package:google_app/google_app.dart';
+import 'package:google_design_system/google_design_system.dart';
 
 export 'configuration/build_context_extension.dart';
 export 'configuration/google_design_system.dart';

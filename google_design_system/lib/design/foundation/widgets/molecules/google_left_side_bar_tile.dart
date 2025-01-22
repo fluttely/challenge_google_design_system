@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart' as material;
 import 'package:flutter/widgets.dart' hide Icon, IconData, Text;
-import 'package:google_app/google_app.dart';
+import 'package:google_design_system/google_design_system.dart';
 
 class GoogleLeftSideBarTile extends StatefulWidget {
   const GoogleLeftSideBarTile({
@@ -30,7 +30,9 @@ class _GoogleLeftSideBarTileState extends State<GoogleLeftSideBarTile> {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.only(
-              topRight: Radius.circular(16), bottomRight: Radius.circular(16)),
+            topRight: Radius.circular(16),
+            bottomRight: Radius.circular(16),
+          ),
           color: isSelected ? GoogleLightColors.seedColor : null,
         ),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
