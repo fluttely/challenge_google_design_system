@@ -4,7 +4,7 @@ import 'package:google_design_system/google_design_system.dart';
 final List<LeftSideBarTileModel> leftSideBarTileList = [
   LeftSideBarTileModel(
     icon: GoogleIcons.add_to_drive_outlined,
-    title: 'My Drive',
+    title: 'My Keep',
   ),
   LeftSideBarTileModel(
     icon: GoogleIcons.computer,
@@ -99,11 +99,12 @@ void main() {
 
   widgets.runApp(
     GoogleApp(
-      title: 'Google Drive',
+      title: 'Google Keep',
       home: GoogleScaffold(
-        logo: widgets.Image.asset('assets/images/google_drive_logo.png'),
-        title: 'Drive',
-        barHintText: 'Search in Drive',
+        logo: widgets.Image.asset('assets/images/google_keep_logo.png'),
+        title: 'Keep',
+        barHintText: 'Search',
+        haveHottomDivider: true,
         leftSideBar: GoogleLeftSideBar(
           floatingActionButton: GoogleFloatingActionButton.extended(
             onPressed: () {},
@@ -112,6 +113,7 @@ void main() {
             backgroundColor: GoogleLightColors.bodyColor,
           ),
           leftSideBarTileList: leftSideBarTileList,
+          tileType: GoogleLeftSideBarTileType.big,
         ),
         bodyTileList: foldersList
             .map(

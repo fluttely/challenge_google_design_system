@@ -112,6 +112,7 @@ void main() {
             backgroundColor: GoogleLightColors.bodyColor,
           ),
           leftSideBarTileList: leftSideBarTileList,
+          tileType: GoogleLeftSideBarTileType.small,
         ),
         bodyTileList: foldersList
             .map(

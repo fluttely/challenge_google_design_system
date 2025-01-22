@@ -17,6 +17,7 @@ export 'foundation/widgets/molecules/buttons/google_elevated_button.dart';
 export 'foundation/widgets/molecules/buttons/google_floating_action_button.dart';
 export 'foundation/widgets/molecules/buttons/google_icon_button.dart';
 export 'foundation/widgets/molecules/google_drive_body_tile.dart';
+export 'foundation/widgets/molecules/google_left_side_bar_tile.dart';
 export 'foundation/widgets/molecules/google_mail_body_tile.dart';
 export 'foundation/widgets/organisms/google_app_bar.dart';
 export 'foundation/widgets/organisms/google_body.dart';

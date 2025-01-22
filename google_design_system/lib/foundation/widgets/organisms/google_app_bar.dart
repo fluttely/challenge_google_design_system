@@ -7,6 +7,7 @@ class GoogleAppBar extends material.AppBar {
     required widgets.Widget image,
     required String title,
     required String barHintText,
+    bool haveHottomDivider = false,
     super.key,
   }) : super(
           toolbarHeight: 64,
@@ -90,5 +91,15 @@ class GoogleAppBar extends material.AppBar {
             ),
             const widgets.SizedBox(width: 4),
           ],
+          bottom: haveHottomDivider
+              ? const widgets.PreferredSize(
+                  preferredSize: widgets.Size.fromHeight(1),
+                  child: material.Divider(
+                    height: 1,
+                    thickness: 1,
+                    color: material.Colors.grey,
+                  ),
+                )
+              : null,
         );
 }

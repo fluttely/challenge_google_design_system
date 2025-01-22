@@ -9,12 +9,14 @@ class GoogleScaffold extends StatelessWidget {
     required this.barHintText,
     required this.leftSideBar,
     required this.bodyTileList,
+    this.haveHottomDivider = false,
     super.key,
   });
 
   final Image logo;
   final String title;
   final String barHintText;
+  final bool haveHottomDivider;
   final GoogleLeftSideBar leftSideBar;
   final List<Widget> bodyTileList;
 
@@ -26,14 +28,11 @@ class GoogleScaffold extends StatelessWidget {
         image: SizedBox(height: 40, child: logo),
         title: title,
         barHintText: barHintText,
+        haveHottomDivider: haveHottomDivider,
       ),
       body: Row(
         children: <Widget>[
-          Container(
-            width: 216, // TODO
-            padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
-            child: leftSideBar,
-          ),
+          leftSideBar,
           Expanded(child: GoogleBody(bodyTileList: bodyTileList)),
         ],
       ),

@@ -121,6 +121,7 @@ void main() {
             icon: GoogleIcons.edit_outlined,
             label: 'Compose',
           ),
+          tileType: GoogleLeftSideBarTileType.small,
           leftSideBarTileList: leftSideBarTileList,
         ),
         bodyTileList: inboxList

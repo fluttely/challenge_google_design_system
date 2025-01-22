@@ -2,14 +2,22 @@ import 'package:flutter/material.dart' as material;
 import 'package:flutter/widgets.dart' hide Icon, IconData, Text;
 import 'package:google_design_system/google_design_system.dart';
 
+enum GoogleLeftSideBarTileType {
+  small,
+  big,
+}
+
 class GoogleLeftSideBarTile extends StatefulWidget {
   const GoogleLeftSideBarTile({
     required this.icon,
     required this.title,
+    this.tileType = GoogleLeftSideBarTileType.small,
     super.key,
   });
+
   final material.IconData icon;
   final String title;
+  final GoogleLeftSideBarTileType tileType;
 
   @override
   State<GoogleLeftSideBarTile> createState() => _GoogleLeftSideBarTileState();
@@ -20,6 +28,8 @@ class _GoogleLeftSideBarTileState extends State<GoogleLeftSideBarTile> {
 
   @override
   Widget build(BuildContext context) {
+    final tileType = widget.tileType;
+
     return material.InkWell(
       borderRadius: const BorderRadius.all(Radius.circular(16)),
       onTap: () {
@@ -29,9 +39,15 @@ class _GoogleLeftSideBarTileState extends State<GoogleLeftSideBarTile> {
       },
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: const BorderRadius.only(
-            topRight: Radius.circular(16),
-            bottomRight: Radius.circular(16),
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(
+              tileType == GoogleLeftSideBarTileType.small ? 16 : 0,
+            ),
+            bottomLeft: Radius.circular(
+              tileType == GoogleLeftSideBarTileType.small ? 16 : 0,
+            ),
+            topRight: const Radius.circular(16),
+            bottomRight: const Radius.circular(16),
           ),
           color: isSelected ? GoogleLightColors.seedColor : null,
         ),
@@ -39,8 +55,16 @@ class _GoogleLeftSideBarTileState extends State<GoogleLeftSideBarTile> {
         child: Row(
           children: [
             GoogleIcon(widget.icon),
-            const SizedBox(width: 16),
-            GoogleText(widget.title),
+            SizedBox(
+              width: tileType == GoogleLeftSideBarTileType.small ? 16 : 32,
+            ),
+            GoogleText(
+              widget.title,
+              fontSize: tileType == GoogleLeftSideBarTileType.small ? 14 : 16,
+              fontWeight: tileType == GoogleLeftSideBarTileType.small
+                  ? FontWeight.normal
+                  : FontWeight.bold,
+            ),
           ],
         ),
       ),
