@@ -23,8 +23,8 @@ class GoogleIcons {
   static const widgets.IconData info_outline_rounded =
       material.Icons.info_outline_rounded;
 
-  /// [LeftSideBar]
-  /// [GoogleDrive]
+  /// LeftSideBar
+  /// GoogleDrive
   static const widgets.IconData add_to_drive_outlined =
       material.Icons.add_to_drive_outlined;
   static const widgets.IconData computer = material.Icons.computer;
@@ -38,7 +38,7 @@ class GoogleIcons {
   static const widgets.IconData delete_outline_rounded =
       material.Icons.delete_outline_rounded;
 
-  /// [GoogleMail]
+  /// GoogleMail
   static const widgets.IconData inbox = material.Icons.inbox;
   static const widgets.IconData sended = material.Icons.send_outlined;
   static const widgets.IconData chat_bubble_outline =

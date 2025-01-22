@@ -28,7 +28,7 @@ class GoogleLeftSideBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 216, // TODO
+      width: 216, // TODO(Kevin): change this value
       padding: EdgeInsets.fromLTRB(
         tileType == GoogleLeftSideBarTileType.small ? 16 : 0,
         4,
