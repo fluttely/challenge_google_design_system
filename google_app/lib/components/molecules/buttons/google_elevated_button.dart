@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart' as material hide IconData;
 
-class ElevatedButton extends material.ElevatedButton {
-  ElevatedButton({
+class GoogleElevatedButton extends material.ElevatedButton {
+  GoogleElevatedButton({
     super.key,
     required super.onPressed,
     required super.child,

@@ -3,27 +3,27 @@ import 'package:google_app/google_app.dart';
 
 final List<LeftSideBarTileModel> leftSideBarTileList = [
   LeftSideBarTileModel(
-    icon: Icons.add_to_drive_outlined,
+    icon: GoogleIcons.add_to_drive_outlined,
     title: 'My Drive',
   ),
   LeftSideBarTileModel(
-    icon: Icons.computer,
+    icon: GoogleIcons.computer,
     title: 'Computers',
   ),
   LeftSideBarTileModel(
-    icon: Icons.people_alt_outlined,
+    icon: GoogleIcons.people_alt_outlined,
     title: 'Shared With Me',
   ),
   LeftSideBarTileModel(
-    icon: Icons.star_border_outlined,
+    icon: GoogleIcons.star_border_outlined,
     title: 'Starred',
   ),
   LeftSideBarTileModel(
-    icon: Icons.report_outlined,
+    icon: GoogleIcons.report_outlined,
     title: 'Spam',
   ),
   LeftSideBarTileModel(
-    icon: Icons.delete_outline_rounded,
+    icon: GoogleIcons.delete_outline_rounded,
     title: 'Trash',
   ),
 ];
@@ -96,24 +96,25 @@ void main() {
       ),
     );
   }
+  
   widgets.runApp(
     GoogleApp(
       title: 'Google Drive',
-      home: Scaffold(
+      home: GoogleScaffold(
         logo: widgets.Image.asset('assets/images/google_drive_logo.png'),
         title: 'Drive',
-        leftSideBar: LeftSideBar(
-          floatingActionButton: FloatingActionButton.extended(
+        leftSideBar: GoogleLeftSideBar(
+          floatingActionButton: GoogleFloatingActionButton.extended(
             onPressed: () {},
             label: 'New',
-            icon: Icons.add,
-            backgroundColor: ColorsUtils.bodyColor,
+            icon: GoogleIcons.add,
+            backgroundColor: GoogleColors.bodyColor,
           ),
           leftSideBarTileList: leftSideBarTileList,
         ),
         bodyTileList: foldersList
             .map(
-              (element) => DriveBodyTile(
+              (element) => GoogleDriveBodyTile(
                 isSelected: element.folderOwner.name != 'Kevin',
                 dateFormatted: element.lastModified.year.toString(),
                 folderName: element.folderName,

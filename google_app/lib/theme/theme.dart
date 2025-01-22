@@ -1,12 +1,8 @@
 import 'package:google_app/google_app.dart';
 
-export 'data/data.dart';
-
 class Theme {
-  final Icons icons;
-  final ColorsUtils colors;
+  const Theme();
 
-  Theme()
-      : icons = Icons(),
-        colors = ColorsUtils();
+  GoogleIcons get icons => const GoogleIcons();
+  GoogleColors get colors => const GoogleColors();
 }

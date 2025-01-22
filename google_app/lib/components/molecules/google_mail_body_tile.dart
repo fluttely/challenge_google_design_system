@@ -2,13 +2,13 @@ import 'package:flutter/material.dart' as material;
 import 'package:flutter/widgets.dart' hide Text, Icon;
 import 'package:google_app/google_app.dart';
 
-class MailBodyTile extends StatelessWidget {
+class GoogleMailBodyTile extends StatelessWidget {
   final String subject;
   final String description;
   final String dateFormatted;
   final bool starred;
 
-  const MailBodyTile({
+  const GoogleMailBodyTile({
     super.key,
     required this.subject,
     required this.description,
@@ -19,13 +19,13 @@ class MailBodyTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return material.ListTile(
-      shape: material.Border.symmetric(
+      shape: const material.Border.symmetric(
         horizontal: BorderSide(
-          color: ColorsUtils.lineColor,
+          color: GoogleColors.lineColor,
           width: 0.5,
         ),
       ),
-      tileColor: ColorsUtils.bodyColor,
+      tileColor: GoogleColors.bodyColor,
       contentPadding: const EdgeInsets.symmetric(horizontal: 18),
       dense: true,
       title: Column(
@@ -36,21 +36,21 @@ class MailBodyTile extends StatelessWidget {
           Row(
             // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              starred ? Icon(Icons.star) : Icon(Icons.star_border_outlined),
+              starred ? GoogleIcon(GoogleIcons.star) : GoogleIcon(GoogleIcons.star_border_outlined),
               const SizedBox(width: 16),
-              Text(
+              GoogleText(
                 subject,
                 fontWeight: FontWeight.bold,
               ),
               const SizedBox(width: 23),
               Expanded(
                 child: 
-              Text(
+              GoogleText(
                 description,
                 fontWeight: FontWeight.bold,
               ),
               ),
-              Text(
+              GoogleText(
                 dateFormatted,
                 fontWeight: FontWeight.bold,
               ),

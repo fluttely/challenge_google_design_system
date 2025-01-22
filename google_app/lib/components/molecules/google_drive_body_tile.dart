@@ -2,7 +2,7 @@ import 'package:flutter/material.dart' as material;
 import 'package:flutter/widgets.dart' hide Text, Icon;
 import 'package:google_app/google_app.dart';
 
-class DriveBodyTile extends StatelessWidget {
+class GoogleDriveBodyTile extends StatelessWidget {
   final bool isShared;
   final bool isSelected;
   final String folderName;
@@ -10,7 +10,7 @@ class DriveBodyTile extends StatelessWidget {
   final String dateFormatted;
   final String folderSizeFormatted;
 
-  const DriveBodyTile({
+  const GoogleDriveBodyTile({
     super.key,
     required this.isShared,
     required this.isSelected,
@@ -23,15 +23,15 @@ class DriveBodyTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return material.ListTile(
-      shape: material.Border.symmetric(
+      shape: const material.Border.symmetric(
         horizontal: BorderSide(
-          color: ColorsUtils.lineColor,
+          color: GoogleColors.lineColor,
           width: 0.5,
         ),
       ),
       selected: isShared,
-      selectedTileColor: ColorsUtils.seedColor,
-      tileColor: ColorsUtils.bodyColor,
+      selectedTileColor: GoogleColors.seedColor,
+      tileColor: GoogleColors.bodyColor,
       contentPadding: const EdgeInsets.symmetric(horizontal: 18),
       title: Row(
         children: [
@@ -39,10 +39,10 @@ class DriveBodyTile extends StatelessWidget {
             flex: 3,
             child: Row(children: [
               isShared
-                  ? Icon.large(Icons.folder_shared_rounded)
-                  : Icon.large(Icons.folder),
+                  ? GoogleIcon.large(GoogleIcons.folder_shared_rounded)
+                  : GoogleIcon.large(GoogleIcons.folder),
               const SizedBox(width: 12),
-              Text(folderName),
+              GoogleText(folderName),
             ]),
           ),
           material.Flexible(
@@ -50,8 +50,8 @@ class DriveBodyTile extends StatelessWidget {
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(folderOwnerName),
-                  Text(dateFormatted),
+                  GoogleText(folderOwnerName),
+                  GoogleText(dateFormatted),
                 ]),
           ),
           const Spacer(flex: 1),
@@ -60,8 +60,8 @@ class DriveBodyTile extends StatelessWidget {
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(folderSizeFormatted),
-                  Icon(Icons.more_vert),
+                  GoogleText(folderSizeFormatted),
+                  GoogleIcon(GoogleIcons.more_vert),
                 ]),
           ),
         ],

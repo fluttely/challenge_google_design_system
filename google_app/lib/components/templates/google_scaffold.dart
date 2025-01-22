@@ -2,13 +2,13 @@ import 'package:flutter/material.dart' as material hide IconData;
 import 'package:flutter/widgets.dart' hide Text;
 import 'package:google_app/google_app.dart';
 
-class Scaffold extends StatelessWidget {
+class GoogleScaffold extends StatelessWidget {
   final Image logo;
   final String title;
-  final LeftSideBar leftSideBar;
+  final GoogleLeftSideBar leftSideBar;
   final List<Widget> bodyTileList;
 
-  const Scaffold({
+  const GoogleScaffold({
     super.key,
     required this.logo,
     required this.title,
@@ -19,8 +19,8 @@ class Scaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return material.Scaffold(
-      backgroundColor: ColorsUtils.canvasColor,
-      appBar: AppBar(
+      backgroundColor: GoogleColors.canvasColor,
+      appBar: GoogleAppBar(
         image: SizedBox(height: 40, child: logo),
         title: title,
       ),
@@ -32,7 +32,7 @@ class Scaffold extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
             child: leftSideBar,
           ),
-          Expanded(child: Body(bodyTileList: bodyTileList)),
+          Expanded(child: GoogleBody(bodyTileList: bodyTileList)),
         ],
       ),
     );

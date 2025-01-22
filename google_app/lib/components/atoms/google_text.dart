@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart' as material hide IconData;
 import 'package:google_app/google_app.dart';
 
-class Text extends material.Text {
-  Text(
+class GoogleText extends material.Text {
+  GoogleText(
     super.data, {
     super.key,
     material.Color? fontColor,
@@ -11,14 +11,14 @@ class Text extends material.Text {
   }) : super(
             style: material.TextStyle(
               overflow: material.TextOverflow.ellipsis,
-          color: fontColor ?? ColorsUtils.textColor,
+          color: fontColor ?? GoogleColors.textColor,
           fontSize: fontSize ?? 14,
           fontWeight: fontWeight ?? material.FontWeight.w300,
         ));
 
-  factory Text.titleLarge(String data) => Text(
+  factory GoogleText.titleLarge(String data) => GoogleText(
         data,
-        fontColor: ColorsUtils.titleLargeColor,
+        fontColor: GoogleColors.titleLargeColor,
         fontSize: 22,
         fontWeight: material.FontWeight.w400,
       );

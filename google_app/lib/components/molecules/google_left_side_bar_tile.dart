@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart' as material;
-import 'package:flutter/widgets.dart' hide Text, Icon;
+import 'package:flutter/widgets.dart' hide Text, Icon, IconData;
 import 'package:google_app/google_app.dart';
 
-class LeftSideBarTile extends StatefulWidget {
-  final IconData icon;
+class GoogleLeftSideBarTile extends StatefulWidget {
+  final material.IconData icon;
   final String title;
 
-  const LeftSideBarTile({
+  const GoogleLeftSideBarTile({
     super.key,
     required this.icon,
     required this.title,
   });
 
   @override
-  State<LeftSideBarTile> createState() => _LeftSideBarTileState();
+  State<GoogleLeftSideBarTile> createState() => _GoogleLeftSideBarTileState();
 }
 
-class _LeftSideBarTileState extends State<LeftSideBarTile> {
+class _GoogleLeftSideBarTileState extends State<GoogleLeftSideBarTile> {
   bool isSelected = false;
 
   @override
@@ -30,15 +30,15 @@ class _LeftSideBarTileState extends State<LeftSideBarTile> {
       },
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: const BorderRadius.all(Radius.circular(16)),
-          color: isSelected ? ColorsUtils.seedColor : null,
+          borderRadius: const BorderRadius.only(topRight: Radius.circular(16), bottomRight: Radius.circular(16)),
+          color: isSelected ? GoogleColors.seedColor : null,
         ),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
         child: Row(
           children: [
-            Icon(widget.icon),
+            GoogleIcon(widget.icon),
             const SizedBox(width: 16),
-            Text(widget.title),
+            GoogleText(widget.title),
           ],
         ),
       ),

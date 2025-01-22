@@ -3,11 +3,11 @@ import 'package:google_app/google_app.dart';
 
 final List<LeftSideBarTileModel> leftSideBarTileList = [
   LeftSideBarTileModel(
-    icon: Icons.inbox,
+    icon: GoogleIcons.inbox,
     title: 'Inbox',
   ),
   LeftSideBarTileModel(
-    icon: Icons.star_border_outlined,
+    icon: GoogleIcons.star_border_outlined,
     title: 'Starred',
   ),
   // LeftSideBarTileModel( adiados
@@ -15,15 +15,15 @@ final List<LeftSideBarTileModel> leftSideBarTileList = [
   //   title: 'Computers',
   // ),
   LeftSideBarTileModel(
-    icon: Icons.sended,
+    icon: GoogleIcons.sended,
     title: 'Sended',
   ),
   LeftSideBarTileModel(
-    icon: Icons.chat_bubble_outline,
+    icon: GoogleIcons.chat_bubble_outline,
     title: 'Chats',
   ),
   LeftSideBarTileModel(
-    icon: Icons.delete_outline_rounded,
+    icon: GoogleIcons.delete_outline_rounded,
     title: 'Trash',
   ),
 ];
@@ -109,21 +109,21 @@ void main() {
   widgets.runApp(
     GoogleApp(
       title: 'Google Gmail',
-      home: Scaffold(
+      home: GoogleScaffold(
         logo: widgets.Image.asset('assets/images/google_gmail_logo.png'),
         title: 'Gmail',
-        leftSideBar: LeftSideBar(
-          floatingActionButton: FloatingActionButton.extended(
+        leftSideBar: GoogleLeftSideBar(
+          floatingActionButton: GoogleFloatingActionButton.extended(
             elevation: 0,
-            backgroundColor: ColorsUtils.seedColor,
+            backgroundColor: GoogleColors.seedColor,
             onPressed: () {},
-            icon: Icons.edit_outlined,
+            icon: GoogleIcons.edit_outlined,
             label: 'Compose',
           ),
           leftSideBarTileList: leftSideBarTileList,
         ),
         bodyTileList: inboxList
-            .map((element) => MailBodyTile(
+            .map((element) => GoogleMailBodyTile(
                   subject: element.subject,
                   description: element.description,
                   starred: element.starred,

@@ -1,28 +1,28 @@
-import 'package:flutter/material.dart' as material hide IconData;
-import 'package:flutter/widgets.dart' hide Text, Icon;
+import 'package:flutter/material.dart' as material ;
+import 'package:flutter/widgets.dart' hide Text, Icon hide IconData;
 import 'package:google_app/google_app.dart';
 
-class FloatingActionButton extends material.FloatingActionButton {
-  const FloatingActionButton({
+class GoogleFloatingActionButton extends material.FloatingActionButton {
+  const GoogleFloatingActionButton({
     super.key,
     required super.onPressed,
     required super.child,
   });
 
-  FloatingActionButton.extended({
+  GoogleFloatingActionButton.extended({
     super.key,
     required void Function()? onPressed,
     required String label,
-    IconData? icon,
+    material.IconData? icon,
     Color? backgroundColor,
     double? elevation,
   }) : super.extended(
           onPressed: onPressed,
-          label: Text(
+          label: GoogleText(
             label,
             fontWeight: FontWeight.w500,
           ),
-          icon: icon != null ? Icon(icon,  size: 24) : null,
+          icon: icon != null ? GoogleIcon(icon,  size: 24) : null,
           backgroundColor: backgroundColor,
           elevation: elevation ?? 2,
         );

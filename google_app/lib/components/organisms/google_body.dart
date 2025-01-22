@@ -2,10 +2,10 @@ import 'package:flutter/material.dart' as material;
 import 'package:flutter/widgets.dart' hide Text;
 import 'package:google_app/google_app.dart';
 
-class Body extends StatelessWidget {
+class GoogleBody extends StatelessWidget {
   final List<Widget> bodyTileList;
 
-  const Body({
+  const GoogleBody({
     super.key,
     required this.bodyTileList,
   });
@@ -21,7 +21,7 @@ class Body extends StatelessWidget {
       ),
       child: material.Card(
         elevation: 0,
-        color: ColorsUtils.bodyColor,
+        color: GoogleColors.bodyColor,
         child: material.Padding(
           padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 18.0),
           child: material.Column(
@@ -31,7 +31,7 @@ class Body extends StatelessWidget {
                   const material.Spacer(),
                   material.IconButton(
                     icon: const material.Icon(
-                      material.Icons.label_off_outlined,
+                      GoogleIcons.label_off_outlined,
                       size: 20,
                     ),
                     onPressed: () {},
@@ -39,7 +39,7 @@ class Body extends StatelessWidget {
                   const material.SizedBox(width: 4),
                   material.IconButton(
                     icon: const material.Icon(
-                      material.Icons.backup_sharp,
+                      GoogleIcons.backup_sharp,
                       size: 20,
                     ),
                     onPressed: () {},
@@ -47,7 +47,7 @@ class Body extends StatelessWidget {
                   const material.SizedBox(width: 4),
                   material.IconButton(
                     icon: const material.Icon(
-                      material.Icons.info_outline_rounded,
+                      GoogleIcons.info_outline_rounded,
                       size: 20,
                     ),
                     onPressed: () {},
