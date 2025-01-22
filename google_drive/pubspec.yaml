@@ -23,3 +23,5 @@ flutter:
     - assets/images/google_drive_logo.png
     - assets/images/avatar_picture.png
     - assets/images/google_vector.jpeg
+
+  uses-material-design: true
