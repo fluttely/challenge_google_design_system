@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
-import 'package:google_design_system/design/foundation/widgets/molecules/google_left_side_bar_tile.dart';
+import 'package:google_design_system/foundation/widgets/molecules/google_left_side_bar_tile.dart';
 import 'package:google_design_system/google_design_system.dart';
 
 class LeftSideBarTileModel {
