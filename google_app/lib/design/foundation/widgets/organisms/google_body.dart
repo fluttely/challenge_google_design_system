@@ -3,12 +3,11 @@ import 'package:flutter/widgets.dart' hide Text;
 import 'package:google_app/google_app.dart';
 
 class GoogleBody extends StatelessWidget {
-  final List<Widget> bodyTileList;
-
   const GoogleBody({
-    super.key,
     required this.bodyTileList,
+    super.key,
   });
+  final List<Widget> bodyTileList;
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +20,9 @@ class GoogleBody extends StatelessWidget {
       ),
       child: material.Card(
         elevation: 0,
-        color: GoogleColors.bodyColor,
+        color: GoogleLightColors.bodyColor,
         child: material.Padding(
-          padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 18.0),
+          padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 18),
           child: material.Column(
             children: [
               material.Row(

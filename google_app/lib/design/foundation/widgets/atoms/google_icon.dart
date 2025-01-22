@@ -7,7 +7,7 @@ class GoogleIcon extends widgets.Icon {
     super.key,
     double? size,
   }) : super(
-          color: GoogleColors.iconColor,
+          color: GoogleLightColors.iconColor,
           size: size ?? 20,
         );
 

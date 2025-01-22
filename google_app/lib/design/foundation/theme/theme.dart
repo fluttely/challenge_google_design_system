@@ -4,5 +4,6 @@ class Theme {
   const Theme();
 
   GoogleIcons get icons => const GoogleIcons();
-  GoogleColors get colors => const GoogleColors();
+  GoogleLightColors get lightColors => const GoogleLightColors();
+  GoogleDarkColors get darkColors => const GoogleDarkColors();
 }

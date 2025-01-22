@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart' as material hide IconData;
 import 'package:flutter/widgets.dart' as widgets;
 
-class GoogleColors {
-  const GoogleColors();
+class GoogleLightColors {
+  const GoogleLightColors();
 
   /// Generic Colors
   static const widgets.Color pink = material.Colors.pink;
@@ -16,7 +16,11 @@ class GoogleColors {
   static const widgets.Color darkGrey700 =
       material.Color.fromARGB(255, 97, 97, 97); // material.Colors.grey.shade700
   static const widgets.Color grey400 = material.Color.fromARGB(
-      255, 189, 189, 189); // material.Colors.grey.shade400
+    255,
+    189,
+    189,
+    189,
+  ); // material.Colors.grey.shade400
 
   /// Theme Colors
   static const widgets.Color backgroundColor = blue;

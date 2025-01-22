@@ -6,13 +6,13 @@ class GoogleAvatarButton extends material.FloatingActionButton {
   GoogleAvatarButton({
     super.key,
   }) : super(
-          backgroundColor: GoogleColors.canvasColor,
+          backgroundColor: GoogleLightColors.canvasColor,
           shape: const widgets.CircleBorder(),
           elevation: 0,
           hoverElevation: 3,
           onPressed: () {},
           child: const material.CircleAvatar(
-            backgroundColor: GoogleColors.canvasColor,
+            backgroundColor: GoogleLightColors.canvasColor,
             backgroundImage: widgets.AssetImage(
               'assets/images/avatar_picture.png',
             ),

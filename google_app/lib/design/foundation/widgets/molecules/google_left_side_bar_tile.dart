@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart' as material;
-import 'package:flutter/widgets.dart' hide Text, Icon, IconData;
+import 'package:flutter/widgets.dart' hide Icon, IconData, Text;
 import 'package:google_app/google_app.dart';
 
 class GoogleLeftSideBarTile extends StatefulWidget {
-  final material.IconData icon;
-  final String title;
-
   const GoogleLeftSideBarTile({
-    super.key,
     required this.icon,
     required this.title,
+    super.key,
   });
+  final material.IconData icon;
+  final String title;
 
   @override
   State<GoogleLeftSideBarTile> createState() => _GoogleLeftSideBarTileState();
@@ -30,8 +29,9 @@ class _GoogleLeftSideBarTileState extends State<GoogleLeftSideBarTile> {
       },
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: const BorderRadius.only(topRight: Radius.circular(16), bottomRight: Radius.circular(16)),
-          color: isSelected ? GoogleColors.seedColor : null,
+          borderRadius: const BorderRadius.only(
+              topRight: Radius.circular(16), bottomRight: Radius.circular(16)),
+          color: isSelected ? GoogleLightColors.seedColor : null,
         ),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
         child: Row(

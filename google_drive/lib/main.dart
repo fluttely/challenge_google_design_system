@@ -96,7 +96,7 @@ void main() {
       ),
     );
   }
-  
+
   widgets.runApp(
     GoogleApp(
       title: 'Google Drive',
@@ -108,7 +108,7 @@ void main() {
             onPressed: () {},
             label: 'New',
             icon: GoogleIcons.add,
-            backgroundColor: GoogleColors.bodyColor,
+            backgroundColor: GoogleLightColors.bodyColor,
           ),
           leftSideBarTileList: leftSideBarTileList,
         ),

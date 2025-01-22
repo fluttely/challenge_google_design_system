@@ -115,7 +115,7 @@ void main() {
         leftSideBar: GoogleLeftSideBar(
           floatingActionButton: GoogleFloatingActionButton.extended(
             elevation: 0,
-            backgroundColor: GoogleColors.seedColor,
+            backgroundColor: GoogleLightColors.seedColor,
             onPressed: () {},
             icon: GoogleIcons.edit_outlined,
             label: 'Compose',

@@ -4,12 +4,12 @@ import 'package:google_app/google_app.dart';
 
 class GoogleAppBar extends material.AppBar {
   GoogleAppBar({
-    super.key,
     required widgets.Widget image,
     required String title,
+    super.key,
   }) : super(
           toolbarHeight: 64,
-          backgroundColor: GoogleColors.canvasColor,
+          backgroundColor: GoogleLightColors.canvasColor,
           leadingWidth: 216,
           titleSpacing: 0,
           leading: widgets.Row(
@@ -29,10 +29,10 @@ class GoogleAppBar extends material.AppBar {
               viewElevation: 0,
               barElevation: widgets.WidgetStateProperty.all(0),
               barBackgroundColor: widgets.WidgetStateProperty.all(
-                GoogleColors.searchAnchorBarColor,
+                GoogleLightColors.searchAnchorBarColor,
               ),
               barHintText: 'Search in $title',
-              viewBackgroundColor: GoogleColors.bodyColor,
+              viewBackgroundColor: GoogleLightColors.bodyColor,
               suggestionsBuilder: (context, controller) {
                 return List.generate(
                   6,
@@ -52,7 +52,7 @@ class GoogleAppBar extends material.AppBar {
             ),
             const widgets.SizedBox(width: 4),
             GoogleIconButton(
-              icon:  const GoogleIcon(
+              icon: const GoogleIcon(
                 GoogleIcons.settings_outlined,
                 size: 26,
               ),
@@ -81,7 +81,7 @@ class GoogleAppBar extends material.AppBar {
               child: widgets.Container(
                 padding: const widgets.EdgeInsets.all(2),
                 decoration: const widgets.BoxDecoration(
-                  color: GoogleColors.bodyColor,
+                  color: GoogleLightColors.bodyColor,
                   shape: widgets.BoxShape.circle,
                 ),
                 child: GoogleAvatarButton(),
