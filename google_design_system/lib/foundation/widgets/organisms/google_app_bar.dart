@@ -6,6 +6,7 @@ class GoogleAppBar extends material.AppBar {
   GoogleAppBar({
     required widgets.Widget image,
     required String title,
+    required String barHintText,
     super.key,
   }) : super(
           toolbarHeight: 64,
@@ -31,7 +32,7 @@ class GoogleAppBar extends material.AppBar {
               barBackgroundColor: widgets.WidgetStateProperty.all(
                 GoogleLightColors.searchAnchorBarColor,
               ),
-              barHintText: 'Search in $title',
+              barHintText: barHintText,
               viewBackgroundColor: GoogleLightColors.bodyColor,
               suggestionsBuilder: (context, controller) {
                 return List.generate(
@@ -73,7 +74,7 @@ class GoogleAppBar extends material.AppBar {
                 image: widgets.DecorationImage(
                   fit: widgets.BoxFit.cover,
                   image: widgets.AssetImage(
-                    'assets/images/google_vector.jpeg',
+                    'packages/google_design_system/assets/images/google_vector.jpeg',
                   ),
                 ),
                 shape: widgets.BoxShape.circle,

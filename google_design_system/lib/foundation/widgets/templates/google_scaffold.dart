@@ -6,12 +6,15 @@ class GoogleScaffold extends StatelessWidget {
   const GoogleScaffold({
     required this.logo,
     required this.title,
+    required this.barHintText,
     required this.leftSideBar,
     required this.bodyTileList,
     super.key,
   });
+
   final Image logo;
   final String title;
+  final String barHintText;
   final GoogleLeftSideBar leftSideBar;
   final List<Widget> bodyTileList;
 
@@ -22,6 +25,7 @@ class GoogleScaffold extends StatelessWidget {
       appBar: GoogleAppBar(
         image: SizedBox(height: 40, child: logo),
         title: title,
+        barHintText: barHintText,
       ),
       body: Row(
         children: <Widget>[

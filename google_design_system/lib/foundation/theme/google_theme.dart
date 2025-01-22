@@ -1,7 +1,7 @@
 import 'package:google_design_system/google_design_system.dart';
 
-class Theme {
-  const Theme();
+class GoogleTheme {
+  const GoogleTheme();
 
   GoogleIcons get icons => const GoogleIcons();
   GoogleLightColors get lightColors => const GoogleLightColors();

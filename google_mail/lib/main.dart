@@ -112,6 +112,7 @@ void main() {
       home: GoogleScaffold(
         logo: widgets.Image.asset('assets/images/google_gmail_logo.png'),
         title: 'Gmail',
+        barHintText: 'Search mail',
         leftSideBar: GoogleLeftSideBar(
           floatingActionButton: GoogleFloatingActionButton.extended(
             elevation: 0,

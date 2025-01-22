@@ -13,7 +13,14 @@
       "request": "launch",
       "type": "dart",
       "program": "google_mail/lib/main.dart",
-      "args": ["-d", "chrome", "--web-renderer", "html"]
+      "args": ["-d", "chrome", "--web-renderer", "canvaskit"]
+    },
+    {
+      "name": "Google Keep",
+      "request": "launch",
+      "type": "dart",
+      "program": "google_keep/lib/main.dart",
+      "args": ["-d", "chrome", "--web-renderer", "canvaskit"]
     }
   ]
 }

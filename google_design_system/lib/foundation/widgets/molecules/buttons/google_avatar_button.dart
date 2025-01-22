@@ -14,7 +14,7 @@ class GoogleAvatarButton extends material.FloatingActionButton {
           child: const material.CircleAvatar(
             backgroundColor: GoogleLightColors.canvasColor,
             backgroundImage: widgets.AssetImage(
-              'assets/images/avatar_picture.png',
+              'packages/google_design_system/assets/images/avatar_picture.png',
             ),
           ),
         );

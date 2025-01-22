@@ -1,0 +1,29 @@
+name: google_keep
+description: "A new Flutter project."
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_design_system:
+    path: ../google_design_system
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  very_good_analysis: ^6.0.0
+
+flutter:
+  assets:
+    - assets/images/google_keep_logo.png
+    - packages/google_design_system/assets/images/avatar_picture.png
+    - packages/google_design_system/assets/images/google_vector.jpeg
+    - packages/google_design_system/assets/images/google_logo.png
+
+  uses-material-design: true
