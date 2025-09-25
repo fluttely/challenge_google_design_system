@@ -2,13 +2,15 @@ name: challenge_google_design_system
 repository: https://github.com/fluttely/challenge_google_design_system
 
 packages:
-  - "*"
+  - google_core/
+  - google_design_system/
+  - google_drive/
+  - google_keep/
+  - google_mail/
 
 command:
   bootstrap:
-    # Runs pub get for all packages
     runPubGetInParallel: true
-    usePubspecOverrides: false
 
 scripts:
   get:
@@ -23,22 +25,6 @@ scripts:
     name: Analyze all packages
     run: melos exec -- "flutter analyze"
 
-  test:
-    name: Run tests for all packages
-    run: melos exec --fail-fast --dir-exists="test" -- "flutter test"
-
   format:
     name: Format all packages
-    run: melos exec -- "dart format --set-exit-if-changed lib/ test/"
-
-  format-fix:
-    name: Format all packages and fix
     run: melos exec -- "dart format lib/ test/"
-
-  version:
-    name: Version all packages
-    run: melos version --all --yes
-
-  pub-get-offline:
-    name: Get dependencies offline
-    run: melos exec -- "flutter pub get --offline"

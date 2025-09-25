@@ -67,6 +67,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  google_core:
+    dependency: "direct main"
+    description:
+      path: "../google_core"
+      relative: true
+    source: path
+    version: "1.0.0"
   google_design_system:
     dependency: "direct main"
     description:
@@ -138,13 +145,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.1"
-  shared_models:
-    dependency: "direct main"
-    description:
-      path: "../shared_models"
-      relative: true
-    source: path
-    version: "1.0.0"
   sky_engine:
     dependency: transitive
     description: flutter

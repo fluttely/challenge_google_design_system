@@ -1,5 +1,5 @@
-name: shared_models
-description: Shared models used across Google apps
+name: google_core
+description: Core models and utilities shared across Google apps
 version: 1.0.0
 publish_to: "none"
 

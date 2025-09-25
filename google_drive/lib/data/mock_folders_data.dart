@@ -1,4 +1,4 @@
-import 'package:shared_models/shared_models.dart';
+import 'package:google_core/google_core.dart';
 
 import '../models/models.dart';
 
