@@ -5,21 +5,21 @@
       "name": "Google Drive",
       "request": "launch",
       "type": "dart",
-      "program": "google_drive/lib/main.dart",
+      "program": "apps/google_drive/lib/main.dart",
       "args": ["-d", "chrome"]
     },
     {
       "name": "Google Gmail",
       "request": "launch",
       "type": "dart",
-      "program": "google_mail/lib/main.dart",
+      "program": "apps/google_mail/lib/main.dart",
       "args": ["-d", "chrome"]
     },
     {
       "name": "Google Keep",
       "request": "launch",
       "type": "dart",
-      "program": "google_keep/lib/main.dart",
+      "program": "apps/google_keep/lib/main.dart",
       "args": ["-d", "chrome"]
     }
   ]

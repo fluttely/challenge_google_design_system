@@ -70,14 +70,14 @@ packages:
   google_core:
     dependency: "direct main"
     description:
-      path: "../google_core"
+      path: "../../packages/google_core"
       relative: true
     source: path
     version: "1.0.0"
   google_design_system:
     dependency: "direct main"
     description:
-      path: "../google_design_system"
+      path: "../../packages/google_design_system"
       relative: true
     source: path
     version: "0.0.1"

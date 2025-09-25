@@ -10,9 +10,9 @@ dependencies:
   flutter:
     sdk: flutter
   google_design_system:
-    path: ../google_design_system
+    path: ../../packages/google_design_system
   google_core:
-    path: ../google_core
+    path: ../../packages/google_core
 
 dev_dependencies:
   flutter_test:

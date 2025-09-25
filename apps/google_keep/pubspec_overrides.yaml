@@ -1,6 +1,6 @@
 # melos_managed_dependency_overrides: google_core,google_design_system
 dependency_overrides:
   google_core:
-    path: ../google_core
+    path: ../../packages/google_core
   google_design_system:
-    path: ../google_design_system
+    path: ../../packages/google_design_system

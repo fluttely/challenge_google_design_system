@@ -11,20 +11,20 @@ melos bootstrap
 ## run:
 
 ```shell
-cd google_drive
+cd apps/google_drive
 flutter run -d chrome
 ```
 
 ## run:
 
 ```shell
-cd google_mail
+cd apps/google_mail
 flutter run -d chrome
 ```
 
 ## run:
 
 ```shell
-cd google_keep
+cd apps/google_keep
 flutter run -d chrome
 ```

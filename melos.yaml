@@ -2,11 +2,11 @@ name: challenge_google_design_system
 repository: https://github.com/fluttely/challenge_google_design_system
 
 packages:
-  - google_core/
-  - google_design_system/
-  - google_drive/
-  - google_keep/
-  - google_mail/
+  - apps/google_drive/
+  - apps/google_keep/
+  - apps/google_mail/
+  - packages/google_core/
+  - packages/google_design_system/
 
 command:
   bootstrap:
