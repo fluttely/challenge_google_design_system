@@ -1,4 +1,5 @@
 import 'package:google_keep/google_keep.dart';
+import 'package:shared_models/shared_models.dart';
 
 class MockNotesData {
   static final List<NoteModel> _baseNotes = [

@@ -1,4 +1,4 @@
-import 'user_model.dart';
+import 'package:shared_models/shared_models.dart';
 
 class InboxTileModel {
   final bool starred;

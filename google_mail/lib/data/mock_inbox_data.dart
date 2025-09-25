@@ -1,4 +1,6 @@
-import 'package:google_mail/google_mail.dart';
+import 'package:shared_models/shared_models.dart';
+
+import '../models/models.dart';
 
 class MockInboxData {
   static final List<InboxTileModel> _baseInboxItems = [

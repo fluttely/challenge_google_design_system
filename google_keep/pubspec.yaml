@@ -12,6 +12,8 @@ dependencies:
     sdk: flutter
   google_design_system:
     path: ../google_design_system
+  shared_models:
+    path: ../shared_models
 
 dev_dependencies:
   flutter_test:
