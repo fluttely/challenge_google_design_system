@@ -22,8 +22,5 @@ dev_dependencies:
 flutter:
   assets:
     - assets/images/google_keep_logo.png
-    - packages/google_design_system/assets/images/avatar_picture.png
-    - packages/google_design_system/assets/images/google_vector.jpeg
-    - packages/google_design_system/assets/images/google_logo.png
 
   uses-material-design: true

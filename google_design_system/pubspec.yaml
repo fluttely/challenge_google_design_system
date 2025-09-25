@@ -17,4 +17,9 @@ dev_dependencies:
   very_good_analysis: ^6.0.0
 
 flutter:
+  assets:
+    - assets/images/avatar_picture.png
+    - assets/images/google_vector.jpeg
+    - assets/images/google_logo.png
+
   uses-material-design: true

@@ -75,7 +75,8 @@ class GoogleAppBar extends material.AppBar {
                 image: widgets.DecorationImage(
                   fit: widgets.BoxFit.cover,
                   image: widgets.AssetImage(
-                    'packages/google_design_system/assets/images/google_vector.jpeg',
+                    'assets/images/google_vector.jpeg',
+                    package: 'google_design_system',
                   ),
                 ),
                 shape: widgets.BoxShape.circle,
