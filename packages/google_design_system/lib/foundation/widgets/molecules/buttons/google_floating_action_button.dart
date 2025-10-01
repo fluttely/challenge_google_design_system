@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart' as material;
-import 'package:flutter/widgets.dart' hide Icon, Text hide IconData;
+import 'package:flutter/widgets.dart' hide Icon, IconData, Text;
 import 'package:google_design_system/google_design_system.dart';
 
 class GoogleFloatingActionButton extends material.FloatingActionButton {
