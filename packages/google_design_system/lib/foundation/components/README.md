@@ -5,37 +5,31 @@ Esta estrutura segue a metodologia **Atomic Design** criada por Brad Frost, que 
 ## 📚 Estrutura
 
 ```
-widgets/
+components/
 ├── atoms/              # Átomos - Elementos básicos indivisíveis
 │   ├── google_icon.dart
-│   ├── google_text.dart
-│   └── atoms.dart
+│   └── google_text.dart
 │
 ├── molecules/          # Moléculas - Combinações simples de átomos
 │   ├── buttons/
 │   │   ├── google_avatar_button.dart
 │   │   ├── google_elevated_button.dart
 │   │   ├── google_floating_action_button.dart
-│   │   ├── google_icon_button.dart
-│   │   └── buttons.dart
-│   ├── tiles/
-│   │   ├── google_drive_body_tile.dart
-│   │   ├── google_left_side_bar_tile.dart
-│   │   ├── google_mail_body_tile.dart
-│   │   └── tiles.dart
-│   └── molecules.dart
+│   │   └── google_icon_button.dart
+│   └── tiles/
+│       ├── google_drive_body_tile.dart
+│       ├── google_left_side_bar_tile.dart
+│       └── google_mail_body_tile.dart
 │
 ├── organisms/          # Organismos - Componentes complexos
 │   ├── google_app_bar.dart
 │   ├── google_body.dart
-│   ├── google_left_side_bar.dart
-│   └── organisms.dart
+│   └── google_left_side_bar.dart
 │
 ├── templates/          # Templates - Layouts de página
-│   ├── google_scaffold.dart
-│   └── templates.dart
+│   └── google_scaffold.dart
 │
-└── google_widgets.dart # Entry point principal
+└── google_components.dart # Entry point principal
 ```
 
 ## 🔍 Hierarquia Atomic Design
@@ -108,33 +102,33 @@ Layouts de página que organizam organismos em estruturas específicas.
 ```dart
 import 'package:google_design_system/google_design_system.dart';
 
-// Todos os widgets do Atomic Design estão disponíveis
+// Todos os components do Atomic Design estão disponíveis
 ```
 
 ### Por nível (mais específico):
 
 ```dart
 // Apenas atoms
-import 'package:google_design_system/foundation/widgets/atoms/atoms.dart';
+import 'package:google_design_system/foundation/components/atoms/atoms.dart';
 
 // Apenas molecules
-import 'package:google_design_system/foundation/widgets/molecules/molecules.dart';
+import 'package:google_design_system/foundation/components/molecules/molecules.dart';
 
 // Apenas organisms
-import 'package:google_design_system/foundation/widgets/organisms/organisms.dart';
+import 'package:google_design_system/foundation/components/organisms/organisms.dart';
 
 // Apenas templates
-import 'package:google_design_system/foundation/widgets/templates/templates.dart';
+import 'package:google_design_system/foundation/components/templates/templates.dart';
 ```
 
 ### Por categoria dentro de molecules:
 
 ```dart
 // Apenas buttons
-import 'package:google_design_system/foundation/widgets/molecules/buttons/buttons.dart';
+import 'package:google_design_system/foundation/components/molecules/buttons/buttons.dart';
 
 // Apenas tiles
-import 'package:google_design_system/foundation/widgets/molecules/tiles/tiles.dart';
+import 'package:google_design_system/foundation/components/molecules/tiles/tiles.dart';
 ```
 
 ## 🎯 Benefícios

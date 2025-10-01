@@ -4,5 +4,5 @@ class GoogleDesignSystem {
   const GoogleDesignSystem();
 
   GoogleTheme get theme => const GoogleTheme();
-  GoogleWidgets get widgets => const GoogleWidgets();
+  GoogleComponents get components => const GoogleComponents();
 }

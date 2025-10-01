@@ -2,7 +2,6 @@
 //
 // This follows the Atomic Design methodology by Brad Frost:
 // Atoms → Molecules → Organisms → Templates → Pages
-
 import 'package:google_design_system/google_design_system.dart';
 
 // Atoms - Basic building blocks
@@ -15,8 +14,8 @@ export 'organisms/organisms.dart';
 export 'templates/templates.dart';
 
 /// Helper class to access Google Widgets
-class GoogleWidgets {
-  const GoogleWidgets();
+class GoogleComponents {
+  const GoogleComponents();
 
-  GoogleIcons get icons => const GoogleIcons();
+  GoogleMolecules get molecules => const GoogleMolecules();
 }

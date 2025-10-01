@@ -4,13 +4,13 @@ import 'package:google_design_system/google_design_system.dart';
 
 export 'configuration/build_context_extension.dart';
 export 'configuration/google_design_system.dart';
+// Atomic Design System - Widgets
+export 'foundation/components/google_components.dart';
 export 'foundation/theme/core/components/google_app_bar_theme.dart';
 export 'foundation/theme/core/google_icons.dart';
 export 'foundation/theme/dark/google_dark_colors.dart';
 export 'foundation/theme/google_theme.dart';
 export 'foundation/theme/light/google_light_colors.dart';
-// Atomic Design System - Widgets
-export 'foundation/widgets/google_widgets.dart';
 
 class GoogleApp extends widgets.InheritedWidget {
   GoogleApp({
