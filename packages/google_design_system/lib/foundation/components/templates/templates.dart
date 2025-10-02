@@ -4,8 +4,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:google_design_system/google_design_system.dart';
 
-export 'google_scaffold.dart';
-
 /// Factory class to create Google Design System templates
 class GoogleTemplates {
   const GoogleTemplates();

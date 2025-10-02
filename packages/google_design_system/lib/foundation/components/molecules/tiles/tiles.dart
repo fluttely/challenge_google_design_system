@@ -4,10 +4,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_design_system/google_design_system.dart';
 
-export 'google_drive_body_tile.dart';
-export 'google_left_side_bar_tile.dart';
-export 'google_mail_body_tile.dart';
-
 /// Factory class to create Google Design System tiles
 class GoogleTiles {
   const GoogleTiles();

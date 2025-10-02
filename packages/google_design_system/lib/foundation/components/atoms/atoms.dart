@@ -4,9 +4,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_design_system/google_design_system.dart';
 
-export 'google_icon.dart';
-export 'google_text.dart';
-
 /// Factory class to create Google Design System atoms
 class GoogleAtoms {
   const GoogleAtoms();

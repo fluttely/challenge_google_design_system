@@ -4,10 +4,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:google_design_system/google_design_system.dart';
 
-export 'google_app_bar.dart';
-export 'google_body.dart';
-export 'google_left_side_bar.dart';
-
 /// Factory class to create Google Design System organisms
 class GoogleOrganisms {
   const GoogleOrganisms();
