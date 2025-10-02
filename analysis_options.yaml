@@ -1,0 +1,72 @@
+# ============================================================================
+# MONOREPO ANALYSIS OPTIONS - Challenge Google Design System
+# ============================================================================
+# This file consolidates all analysis options for the entire monorepo.
+# Applies to: apps/* and packages/*
+# ============================================================================
+
+include: package:very_good_analysis/analysis_options.yaml
+
+# ============================================================================
+# LINTER RULES
+# ============================================================================
+linter:
+  rules:
+    # Ordering and organization
+    - combinators_ordering # Order import combinators alphabetically
+    - directives_ordering # Order import/export directives
+
+    # Code quality
+    - prefer_final_fields # Use final for fields that are not reassigned
+    - prefer_final_in_for_each # Use final in for-each loops
+    - prefer_final_locals # Use final for local variables
+
+    # Async/await enforcement
+    - unawaited_futures # Force use of await on Futures
+
+    # Disabled rules from very_good_analysis that conflict with await
+    - no_unawaited_futures: false
+
+# ============================================================================
+# ANALYZER CONFIGURATION
+# ============================================================================
+analyzer:
+  # Exclude generated and build files from analysis
+  exclude:
+    - build/**
+    - "**/build/**"
+    - lib/src/core/presentation/i18n/**
+    - "**/*.g.dart"
+    - "**/generated_plugin_registrant.dart"
+    - lib/firebase_options_dev.dart
+    - lib/firebase_options_prod.dart
+
+  # Error severity overrides
+  errors:
+    # Naming conventions - ignore
+    constant_identifier_names: ignore
+
+    # Annotation issues - ignore
+    invalid_annotation_target: ignore
+
+    # API design - ignore
+    avoid_positional_boolean_parameters: ignore
+    avoid_setters_without_getters: ignore
+
+    # Documentation - ignore (TODO: enable in the future)
+    public_member_api_docs: ignore
+
+    # ASYNC/AWAIT ENFORCEMENT
+    # Force await usage as ERROR (critical)
+    unawaited_futures: error
+
+    # Disable warnings that suggest removing await
+    unnecessary_await_in_return: ignore
+    await_only_futures: ignore
+
+# ============================================================================
+# FORMATTER CONFIGURATION
+# ============================================================================
+formatter:
+  # Preserve trailing commas for better git diffs
+  trailing_commas: preserve

@@ -10,10 +10,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  google_design_system:
-    path: ../../packages/google_design_system
   google_core:
     path: ../../packages/google_core
+  google_design_system:
+    path: ../../packages/google_design_system
 
 dev_dependencies:
   flutter_test:

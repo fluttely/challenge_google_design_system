@@ -2,20 +2,26 @@
 
 ## 🎯 Objetivo
 
-Este monorepo utiliza um **único arquivo `.gitignore` centralizado** na raiz do projeto. Todas as regras aplicam-se recursivamente a todos os apps e packages.
+Este monorepo utiliza **arquivos de configuração centralizados** na raiz do projeto:
+
+- **`.gitignore`** - Regras de ignore do Git
+- **`analysis_options.yaml`** - Configurações do Dart Analyzer
+
+Todas as regras aplicam-se recursivamente a todos os apps e packages.
 
 ## 📍 Localização
 
 ```
 /
-├── .gitignore          ← ÚNICO arquivo .gitignore (centralizado)
+├── .gitignore                  ← ÚNICO arquivo .gitignore (centralizado)
+├── analysis_options.yaml       ← ÚNICO arquivo analysis_options (centralizado)
 ├── apps/
-│   ├── google_drive/   ← Sem .gitignore
-│   ├── google_keep/    ← Sem .gitignore
-│   └── google_mail/    ← Sem .gitignore
+│   ├── google_drive/           ← Sem .gitignore, sem analysis_options.yaml
+│   ├── google_keep/            ← Sem .gitignore, sem analysis_options.yaml
+│   └── google_mail/            ← Sem .gitignore, sem analysis_options.yaml
 └── packages/
-    ├── google_core/    ← Sem .gitignore
-    └── google_design_system/  ← Sem .gitignore
+    ├── google_core/            ← Sem .gitignore, sem analysis_options.yaml
+    └── google_design_system/   ← Sem .gitignore, sem analysis_options.yaml
 ```
 
 ## ✅ Vantagens da Centralização
@@ -23,10 +29,12 @@ Este monorepo utiliza um **único arquivo `.gitignore` centralizado** na raiz do
 1. **🎯 Manutenção Única**: Uma única fonte de verdade para todas as regras
 2. **🔄 Consistência**: Todos os packages seguem as mesmas regras
 3. **📝 Simplicidade**: Não precisa replicar regras em múltiplos arquivos
-4. **🚀 Escalabilidade**: Fácil adicionar novos packages sem criar novos .gitignore
+4. **🚀 Escalabilidade**: Fácil adicionar novos packages sem criar novos arquivos
 5. **👁️ Visibilidade**: Todas as regras visíveis em um só lugar
 
-## 📋 Seções do .gitignore Centralizado
+---
+
+## � .gitignore - Regras de Ignore do Git
 
 ### 1. Miscellaneous
 
@@ -244,5 +252,115 @@ Se você precisar ignorar arquivos específicos de um package:
 
 ---
 
+## 📐 analysis_options.yaml - Configuração do Dart Analyzer
+
+### Estrutura Centralizada
+
+O arquivo `analysis_options.yaml` na raiz aplica-se a todo o monorepo automaticamente.
+
+### Seções Principais
+
+#### 1. Include
+
+Base de regras do `very_good_analysis`:
+
+```yaml
+include: package:very_good_analysis/analysis_options.yaml
+```
+
+#### 2. Linter Rules
+
+Regras de estilo de código:
+
+- `combinators_ordering` - Ordenar combinators alfabeticamente
+- `directives_ordering` - Ordenar imports/exports
+- `prefer_final_fields` - Usar final em fields não reassinados
+- `prefer_final_in_for_each` - Usar final em for-each loops
+- `prefer_final_locals` - Usar final em variáveis locais
+- `unawaited_futures` - Forçar uso de await
+- `no_unawaited_futures: false` - Desabilitar conflito com await
+
+#### 3. Analyzer Configuration
+
+**Exclusões:**
+
+```yaml
+exclude:
+  - build/**
+  - "**/build/**"
+  - "**/*.g.dart"
+  - "**/generated_plugin_registrant.dart"
+```
+
+**Severidade de Erros:**
+
+```yaml
+errors:
+  # Ignored
+  constant_identifier_names: ignore
+  public_member_api_docs: ignore
+
+  # Critical - ERROR
+  unawaited_futures: error
+
+  # Await-related - ignore warnings
+  unnecessary_await_in_return: ignore
+  await_only_futures: ignore
+```
+
+#### 4. Formatter
+
+```yaml
+formatter:
+  trailing_commas: preserve # Melhores git diffs
+```
+
+### Como Funciona
+
+1. **Herança Automática**: Todos packages herdam as regras da raiz
+2. **Não precisa `include`**: Dart automaticamente busca na raiz
+3. **Aplicação Recursiva**: Vale para `apps/` e `packages/`
+
+### Validação
+
+```bash
+# Analisar todos os packages
+melos exec -- "flutter analyze"
+
+# Analisar package específico
+cd apps/google_drive && flutter analyze
+
+# Ver quais regras estão ativas
+flutter analyze --verbose
+```
+
+### Benefícios
+
+✅ **Consistência**: Todos packages seguem as mesmas regras
+✅ **Manutenção**: Uma mudança afeta todo o monorepo
+✅ **Onboarding**: Novos devs veem regras em um lugar
+✅ **CI/CD**: Configuração única para pipeline
+
+### Customização por Package
+
+Se um package precisa de regras específicas (raro), pode criar seu próprio `analysis_options.yaml`:
+
+```yaml
+# apps/google_drive/analysis_options.yaml (se necessário)
+include: ../../analysis_options.yaml # Herda da raiz
+
+analyzer:
+  exclude:
+    - specific_file.dart # Exclusão adicional
+```
+
+**⚠️ Evite isso**: Prefira sempre a configuração centralizada.
+
+---
+
 **Última atualização:** Outubro 2025
-**Versão:** 1.0.0
+**Versão:** 2.0.0
+**Changelog:**
+
+- v2.0.0: Adicionado `analysis_options.yaml` centralizado
+- v1.0.0: Estrutura inicial com `.gitignore` centralizado
