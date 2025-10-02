@@ -1,5 +1,4 @@
 import 'package:flutter/widgets.dart';
-import 'package:google_core/google_core.dart';
 import 'package:google_design_system/google_design_system.dart';
 import 'package:google_drive/google_drive.dart';
 
@@ -15,11 +14,6 @@ class DriveHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final designSystem = GoogleApp.of(context).designSystem;
-    final components = designSystem.components;
-    final molecules = components.molecules;
-    final buttons = molecules.buttons;
-
     return GoogleScaffold(
       logo: Image.asset('assets/images/google_drive_logo.png'),
       title: 'Drive',

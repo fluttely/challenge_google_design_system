@@ -200,3 +200,114 @@ import 'package:google_design_system/foundation/widgets/molecules/tiles/tiles.da
 - ✅ Layout de página completo
 - ✅ Estrutura sem conteúdo específico
 - ❌ Não use para componentes menores
+
+## 🏭 Factory Classes (API Profissional)
+
+Cada layer do Atomic Design possui uma **factory class** que fornece métodos estáticos para criar componentes de forma conveniente:
+
+### GoogleAtoms
+
+```dart
+// Criar ícones
+GoogleAtoms.icon(GoogleIcons.add)
+GoogleAtoms.iconMedium(GoogleIcons.folder)
+GoogleAtoms.iconLarge(GoogleIcons.star)
+
+// Criar textos
+GoogleAtoms.text('Hello World')
+GoogleAtoms.textTitleLarge('Title')
+```
+
+### GoogleButtons (Molecule)
+
+```dart
+// Criar buttons
+GoogleButtons.avatar()
+GoogleButtons.elevated(onPressed: () {}, child: Text('Click'))
+GoogleButtons.icon(icon: Icon(Icons.add), onPressed: () {})
+GoogleButtons.floatingAction(child: Icon(Icons.add), onPressed: () {})
+GoogleButtons.floatingActionExtended(label: 'New', onPressed: () {})
+
+// Métodos utilitários
+GoogleButtons.allTypes(onPressed: () {})  // Lista todos os tipos
+GoogleButtons.allTypesMap(onPressed: () {})  // Map de todos os tipos
+GoogleButtons.availableTypes  // Lista de nomes
+```
+
+### GoogleTiles (Molecule)
+
+```dart
+// Criar tiles
+GoogleTiles.leftSideBar(icon: GoogleIcons.folder, title: 'My Drive')
+GoogleTiles.driveBody(
+  folderName: 'Documents',
+  folderOwnerName: 'me',
+  dateFormatted: '2024',
+  folderSizeFormatted: '1.5 GB',
+  isShared: false,
+  isSelected: false,
+)
+GoogleTiles.mailBody(
+  subject: 'Meeting',
+  description: 'Team sync',
+  dateFormatted: 'Oct 1',
+  starred: true,
+)
+```
+
+### GoogleOrganisms
+
+```dart
+// Criar organisms
+GoogleOrganisms.appBar(
+  image: Image.asset('logo.png'),
+  title: 'Drive',
+  barHintText: 'Search in Drive',
+)
+GoogleOrganisms.body(bodyTileList: [tile1, tile2])
+GoogleOrganisms.leftSideBar(
+  floatingActionButton: fab,
+  leftSideBarTileList: menuItems,
+)
+```
+
+### GoogleTemplates
+
+```dart
+// Criar templates
+GoogleTemplates.scaffold(
+  logo: Image.asset('logo.png'),
+  title: 'Drive',
+  barHintText: 'Search in Drive',
+  leftSideBar: sidebar,
+  bodyTileList: [tile1, tile2],
+)
+```
+
+### Acesso Hierárquico via GoogleComponents
+
+```dart
+// Através do design system
+final designSystem = GoogleApp.of(context).designSystem;
+final components = designSystem.components;
+
+// Acesso por layer
+components.atoms.icon(GoogleIcons.add)
+components.molecules.buttons.elevated(onPressed: () {}, child: Text('Button'))
+components.molecules.tiles.driveBody(...)
+components.organisms.appBar(...)
+components.templates.scaffold(...)
+```
+
+## 🎯 Benefícios das Factory Classes
+
+1. **🎨 API Consistente**: Todos os layers seguem o mesmo padrão
+2. **📝 Menos Verboso**: `GoogleButtons.elevated()` vs `GoogleElevatedButton()`
+3. **🔍 Descoberta Fácil**: Autocomplete mostra todos os métodos disponíveis
+4. **📚 Auto-documentação**: Métodos nomeados descrevem o que criam
+5. **🧪 Testabilidade**: Fácil criar mocks e testes
+6. **🔄 Flexibilidade**: Fácil adicionar variantes sem quebrar código existente
+
+```
+
+```
