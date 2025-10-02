@@ -1,8 +1,9 @@
-import 'package:flutter/widgets.dart' as widgets hide Icon, IconData;
+import 'package:flutter/widgets.dart';
+import 'package:google_core/google_core.dart';
 import 'package:google_design_system/google_design_system.dart';
 import 'package:google_drive/google_drive.dart';
 
-class DriveHomePage extends widgets.StatelessWidget {
+class DriveHomePage extends StatelessWidget {
   final List<FolderModel> folders;
   final List<LeftSideBarTileModel> menuItems;
 
@@ -13,9 +14,14 @@ class DriveHomePage extends widgets.StatelessWidget {
   });
 
   @override
-  widgets.Widget build(widgets.BuildContext context) {
+  Widget build(BuildContext context) {
+    final designSystem = GoogleApp.of(context).designSystem;
+    final components = designSystem.components;
+    final molecules = components.molecules;
+    final buttons = molecules.buttons;
+
     return GoogleScaffold(
-      logo: widgets.Image.asset('assets/images/google_drive_logo.png'),
+      logo: Image.asset('assets/images/google_drive_logo.png'),
       title: 'Drive',
       barHintText: 'Search in Drive',
       leftSideBar: GoogleLeftSideBar(

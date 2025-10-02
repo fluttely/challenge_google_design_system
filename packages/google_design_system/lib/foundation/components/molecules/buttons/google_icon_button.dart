@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart' as material hide IconData;
+import 'package:flutter/material.dart';
 
-class GoogleIconButton extends material.IconButton {
+class GoogleIconButton extends IconButton {
   const GoogleIconButton({
     required super.onPressed,
     required super.icon,

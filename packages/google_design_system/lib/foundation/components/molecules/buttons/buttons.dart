@@ -1,8 +1,7 @@
 // Button components
 // ignore_for_file: non_constant_identifier_names
 
-import 'package:flutter/material.dart' as material;
-import 'package:flutter/widgets.dart' as widgets;
+import 'package:flutter/material.dart';
 import 'package:google_design_system/google_design_system.dart';
 
 export 'google_avatar_button.dart';
@@ -20,8 +19,8 @@ class GoogleButtons {
   /// ```dart
   /// GoogleButtons.avatar()
   /// ```
-  widgets.Widget avatar({
-    widgets.Key? key,
+  Widget avatar({
+    Key? key,
   }) {
     return GoogleAvatarButton(
       key: key,
@@ -37,10 +36,10 @@ class GoogleButtons {
   ///   child: Text('Click me'),
   /// )
   /// ```
-  widgets.Widget elevated({
+  Widget elevated({
     required void Function()? onPressed,
-    required widgets.Widget child,
-    widgets.Key? key,
+    required Widget child,
+    Key? key,
     double? elevation,
   }) {
     return GoogleElevatedButton(
@@ -60,10 +59,10 @@ class GoogleButtons {
   ///   onPressed: () {},
   /// )
   /// ```
-  widgets.Widget icon({
-    required widgets.Widget icon,
+  Widget icon({
+    required Widget icon,
     required void Function()? onPressed,
-    widgets.Key? key,
+    Key? key,
   }) {
     return GoogleIconButton(
       key: key,
@@ -81,10 +80,10 @@ class GoogleButtons {
   ///   onPressed: () {},
   /// )
   /// ```
-  widgets.Widget floatingAction({
-    required widgets.Widget child,
+  Widget floatingAction({
+    required Widget child,
     required void Function()? onPressed,
-    widgets.Key? key,
+    Key? key,
   }) {
     return GoogleFloatingActionButton(
       key: key,
@@ -106,9 +105,9 @@ class GoogleButtons {
   GoogleFloatingActionButton floatingActionExtended({
     required String label,
     required void Function()? onPressed,
-    widgets.Key? key,
-    material.IconData? icon,
-    material.Color? backgroundColor,
+    Key? key,
+    IconData? icon,
+    Color? backgroundColor,
     double? elevation,
   }) {
     return GoogleFloatingActionButton.extended(
@@ -127,25 +126,25 @@ class GoogleButtons {
   /// ```dart
   /// final allButtons = GoogleButtons.allTypes(onPressed: () {});
   /// ```
-  List<widgets.Widget> allTypes({
+  List<Widget> allTypes({
     required void Function()? onPressed,
   }) {
     return [
       avatar(),
       elevated(
         onPressed: onPressed,
-        child: const widgets.Text('Elevated'),
+        child: const Text('Elevated'),
       ),
       icon(
-        icon: const widgets.Icon(material.Icons.add),
+        icon: const Icon(Icons.add),
         onPressed: onPressed,
       ),
       floatingAction(
-        child: const widgets.Icon(material.Icons.add),
+        child: const Icon(Icons.add),
         onPressed: onPressed,
       ),
       floatingActionExtended(
-        icon: material.Icons.add,
+        icon: Icons.add,
         label: 'Extended',
         onPressed: onPressed,
       ),
@@ -159,25 +158,25 @@ class GoogleButtons {
   /// final buttonMap = GoogleButtons.allTypesMap(onPressed: () {});
   /// buttonMap['avatar'] // Returns GoogleAvatarButton
   /// ```
-  Map<String, widgets.Widget> allTypesMap({
+  Map<String, Widget> allTypesMap({
     required void Function()? onPressed,
   }) {
     return {
       'avatar': avatar(),
       'elevated': elevated(
         onPressed: onPressed,
-        child: const widgets.Text('Elevated'),
+        child: const Text('Elevated'),
       ),
       'icon': icon(
-        icon: const widgets.Icon(material.Icons.add),
+        icon: const Icon(Icons.add),
         onPressed: onPressed,
       ),
       'floatingAction': floatingAction(
-        child: const widgets.Icon(material.Icons.add),
+        child: const Icon(Icons.add),
         onPressed: onPressed,
       ),
       'floatingActionExtended': floatingActionExtended(
-        icon: material.Icons.add,
+        icon: Icons.add,
         label: 'Extended',
         onPressed: onPressed,
       ),

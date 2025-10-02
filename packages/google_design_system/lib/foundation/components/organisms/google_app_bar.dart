@@ -1,10 +1,9 @@
-import 'package:flutter/material.dart' as material hide IconData;
-import 'package:flutter/widgets.dart' as widgets;
+import 'package:flutter/material.dart';
 import 'package:google_design_system/google_design_system.dart';
 
-class GoogleAppBar extends material.AppBar {
+class GoogleAppBar extends AppBar {
   GoogleAppBar({
-    required widgets.Widget image,
+    required Widget image,
     required String title,
     required String barHintText,
     bool haveHottomDivider = false,
@@ -14,23 +13,23 @@ class GoogleAppBar extends material.AppBar {
           backgroundColor: GoogleLightColors.canvasColor,
           leadingWidth: 216,
           titleSpacing: 0,
-          leading: widgets.Row(
+          leading: Row(
             children: [
-              const widgets.SizedBox(width: 16),
+              const SizedBox(width: 16),
               image,
-              const widgets.SizedBox(width: 8),
+              const SizedBox(width: 8),
               GoogleText.titleLarge(title),
             ],
           ),
-          title: widgets.Container(
+          title: Container(
             height: 48,
-            margin: const widgets.EdgeInsets.only(
+            margin: const EdgeInsets.only(
               left: 14,
             ),
-            child: material.SearchAnchor.bar(
+            child: SearchAnchor.bar(
               viewElevation: 0,
-              barElevation: widgets.WidgetStateProperty.all(0),
-              barBackgroundColor: widgets.WidgetStateProperty.all(
+              barElevation: WidgetStateProperty.all(0),
+              barBackgroundColor: WidgetStateProperty.all(
                 GoogleLightColors.searchAnchorBarColor,
               ),
               barHintText: barHintText,
@@ -44,7 +43,7 @@ class GoogleAppBar extends material.AppBar {
             ),
           ),
           actions: [
-            const widgets.SizedBox(width: 4),
+            const SizedBox(width: 4),
             GoogleIconButton(
               icon: const GoogleIcon(
                 GoogleIcons.help_outline_outlined,
@@ -52,7 +51,7 @@ class GoogleAppBar extends material.AppBar {
               ),
               onPressed: () {},
             ),
-            const widgets.SizedBox(width: 4),
+            const SizedBox(width: 4),
             GoogleIconButton(
               icon: const GoogleIcon(
                 GoogleIcons.settings_outlined,
@@ -60,7 +59,7 @@ class GoogleAppBar extends material.AppBar {
               ),
               onPressed: () {},
             ),
-            const widgets.SizedBox(width: 4),
+            const SizedBox(width: 4),
             GoogleIconButton(
               icon: const GoogleIcon(
                 GoogleIcons.apps_rounded,
@@ -68,37 +67,37 @@ class GoogleAppBar extends material.AppBar {
               ),
               onPressed: () {},
             ),
-            widgets.Container(
-              padding: const widgets.EdgeInsets.all(2),
-              margin: const widgets.EdgeInsets.symmetric(vertical: 11),
-              decoration: const widgets.BoxDecoration(
-                image: widgets.DecorationImage(
-                  fit: widgets.BoxFit.cover,
-                  image: widgets.AssetImage(
+            Container(
+              padding: const EdgeInsets.all(2),
+              margin: const EdgeInsets.symmetric(vertical: 11),
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(
                     'assets/images/google_vector.jpeg',
                     package: 'google_design_system',
                   ),
                 ),
-                shape: widgets.BoxShape.circle,
+                shape: BoxShape.circle,
               ),
-              child: widgets.Container(
-                padding: const widgets.EdgeInsets.all(2),
-                decoration: const widgets.BoxDecoration(
+              child: Container(
+                padding: const EdgeInsets.all(2),
+                decoration: const BoxDecoration(
                   color: GoogleLightColors.bodyColor,
-                  shape: widgets.BoxShape.circle,
+                  shape: BoxShape.circle,
                 ),
                 child: GoogleAvatarButton(),
               ),
             ),
-            const widgets.SizedBox(width: 4),
+            const SizedBox(width: 4),
           ],
           bottom: haveHottomDivider
-              ? const widgets.PreferredSize(
-                  preferredSize: widgets.Size.fromHeight(1),
-                  child: material.Divider(
+              ? const PreferredSize(
+                  preferredSize: Size.fromHeight(1),
+                  child: Divider(
                     height: 1,
                     thickness: 1,
-                    color: material.Colors.grey,
+                    color: Colors.grey,
                   ),
                 )
               : null,

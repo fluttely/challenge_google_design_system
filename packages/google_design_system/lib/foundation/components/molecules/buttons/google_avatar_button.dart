@@ -1,19 +1,18 @@
-import 'package:flutter/material.dart' as material hide IconData;
-import 'package:flutter/widgets.dart' as widgets;
+import 'package:flutter/material.dart';
 import 'package:google_design_system/google_design_system.dart';
 
-class GoogleAvatarButton extends material.FloatingActionButton {
+class GoogleAvatarButton extends FloatingActionButton {
   GoogleAvatarButton({
     super.key,
   }) : super(
           backgroundColor: GoogleLightColors.canvasColor,
-          shape: const widgets.CircleBorder(),
+          shape: const CircleBorder(),
           elevation: 0,
           hoverElevation: 3,
           onPressed: () {},
-          child: const material.CircleAvatar(
+          child: const CircleAvatar(
             backgroundColor: GoogleLightColors.canvasColor,
-            backgroundImage: widgets.AssetImage(
+            backgroundImage: AssetImage(
               'assets/images/avatar_picture.png',
               package: 'google_design_system',
             ),

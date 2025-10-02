@@ -1,9 +1,9 @@
-import 'package:flutter/widgets.dart' as widgets hide Icon, IconData;
-import 'package:google_design_system/google_design_system.dart';
+import 'package:flutter/widgets.dart';
+import 'package:google_core/google_core.dart';
 import 'package:google_mail/google_mail.dart';
 
 void main() {
-  widgets.runApp(
+  runApp(
     GoogleApp(
       title: 'Google Gmail',
       home: MailHomePage(

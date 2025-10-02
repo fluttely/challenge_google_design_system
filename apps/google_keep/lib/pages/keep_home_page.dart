@@ -1,8 +1,8 @@
-import 'package:flutter/widgets.dart' as widgets hide Icon, IconData;
+import 'package:flutter/widgets.dart';
 import 'package:google_design_system/google_design_system.dart';
 import 'package:google_keep/google_keep.dart';
 
-class KeepHomePage extends widgets.StatelessWidget {
+class KeepHomePage extends StatelessWidget {
   final List<NoteModel> notes;
   final List<LeftSideBarTileModel> menuItems;
 
@@ -13,9 +13,9 @@ class KeepHomePage extends widgets.StatelessWidget {
   });
 
   @override
-  widgets.Widget build(widgets.BuildContext context) {
+  Widget build(BuildContext context) {
     return GoogleScaffold(
-      logo: widgets.Image.asset('assets/images/google_keep_logo.png'),
+      logo: Image.asset('assets/images/google_keep_logo.png'),
       title: 'Keep',
       barHintText: 'Search',
       haveHottomDivider: true,

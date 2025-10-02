@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart' as material;
-import 'package:flutter/widgets.dart' hide Icon, Text;
+import 'package:flutter/material.dart';
 import 'package:google_design_system/google_design_system.dart';
 
 class GoogleMailBodyTile extends StatelessWidget {
@@ -17,8 +16,8 @@ class GoogleMailBodyTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return material.ListTile(
-      shape: const material.Border.symmetric(
+    return ListTile(
+      shape: const Border.symmetric(
         horizontal: BorderSide(
           color: GoogleLightColors.lineColor,
           width: 0.5,

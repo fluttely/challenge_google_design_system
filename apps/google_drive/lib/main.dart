@@ -1,9 +1,9 @@
-import 'package:flutter/widgets.dart' as widgets hide Icon, IconData;
-import 'package:google_design_system/google_design_system.dart';
+import 'package:flutter/widgets.dart';
+import 'package:google_core/google_core.dart';
 import 'package:google_drive/google_drive.dart';
 
 void main() {
-  widgets.runApp(
+  runApp(
     GoogleApp(
       title: 'Google Drive',
       home: DriveHomePage(

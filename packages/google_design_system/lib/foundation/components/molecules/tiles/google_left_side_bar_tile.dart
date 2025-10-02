@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart' as material;
-import 'package:flutter/widgets.dart' hide Icon, IconData, Text;
+import 'package:flutter/material.dart';
 import 'package:google_design_system/google_design_system.dart';
 
 enum GoogleLeftSideBarTileType {
@@ -15,7 +14,7 @@ class GoogleLeftSideBarTile extends StatefulWidget {
     super.key,
   });
 
-  final material.IconData icon;
+  final IconData icon;
   final String title;
   final GoogleLeftSideBarTileType tileType;
 
@@ -30,7 +29,7 @@ class _GoogleLeftSideBarTileState extends State<GoogleLeftSideBarTile> {
   Widget build(BuildContext context) {
     final tileType = widget.tileType;
 
-    return material.InkWell(
+    return InkWell(
       borderRadius: const BorderRadius.all(Radius.circular(16)),
       onTap: () {
         setState(() {

@@ -1,7 +1,7 @@
-import 'package:flutter/widgets.dart' as widgets;
+import 'package:flutter/widgets.dart';
 import 'package:google_design_system/google_design_system.dart';
 
-class GoogleIcon extends widgets.Icon {
+class GoogleIcon extends Icon {
   const GoogleIcon(
     super.icon, {
     super.key,
@@ -11,7 +11,6 @@ class GoogleIcon extends widgets.Icon {
           size: size ?? 20,
         );
 
-  factory GoogleIcon.medium(widgets.IconData icon) =>
-      GoogleIcon(icon, size: 20);
-  factory GoogleIcon.large(widgets.IconData icon) => GoogleIcon(icon, size: 24);
+  factory GoogleIcon.medium(IconData icon) => GoogleIcon(icon, size: 20);
+  factory GoogleIcon.large(IconData icon) => GoogleIcon(icon, size: 24);
 }

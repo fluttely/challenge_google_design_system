@@ -1,8 +1,8 @@
-import 'package:flutter/widgets.dart' as widgets hide Icon, IconData;
+import 'package:flutter/widgets.dart';
 import 'package:google_design_system/google_design_system.dart';
 import 'package:google_mail/google_mail.dart';
 
-class MailHomePage extends widgets.StatelessWidget {
+class MailHomePage extends StatelessWidget {
   final List<InboxTileModel> inboxItems;
   final List<LeftSideBarTileModel> menuItems;
 
@@ -13,9 +13,9 @@ class MailHomePage extends widgets.StatelessWidget {
   });
 
   @override
-  widgets.Widget build(widgets.BuildContext context) {
+  Widget build(BuildContext context) {
     return GoogleScaffold(
-      logo: widgets.Image.asset('assets/images/google_gmail_logo.png'),
+      logo: Image.asset('assets/images/google_gmail_logo.png'),
       title: 'Gmail',
       barHintText: 'Search mail',
       leftSideBar: GoogleLeftSideBar(

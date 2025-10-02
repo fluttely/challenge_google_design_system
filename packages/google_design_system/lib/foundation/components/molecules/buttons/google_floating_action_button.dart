@@ -1,8 +1,7 @@
-import 'package:flutter/material.dart' as material;
-import 'package:flutter/widgets.dart' hide Icon, IconData, Text;
+import 'package:flutter/material.dart';
 import 'package:google_design_system/google_design_system.dart';
 
-class GoogleFloatingActionButton extends material.FloatingActionButton {
+class GoogleFloatingActionButton extends FloatingActionButton {
   const GoogleFloatingActionButton({
     required super.onPressed,
     required super.child,
@@ -13,7 +12,7 @@ class GoogleFloatingActionButton extends material.FloatingActionButton {
     required super.onPressed,
     required String label,
     super.key,
-    material.IconData? icon,
+    IconData? icon,
     super.backgroundColor,
     double? elevation,
   }) : super.extended(

@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart' as material hide IconData;
-import 'package:flutter/widgets.dart' hide Text;
+import 'package:flutter/material.dart';
 import 'package:google_design_system/google_design_system.dart';
 
 class GoogleScaffold extends StatelessWidget {
@@ -22,7 +21,7 @@ class GoogleScaffold extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return material.Scaffold(
+    return Scaffold(
       backgroundColor: GoogleLightColors.canvasColor,
       appBar: GoogleAppBar(
         image: SizedBox(height: 40, child: logo),

@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart' as material;
-import 'package:flutter/widgets.dart' hide Text;
+import 'package:flutter/material.dart';
 import 'package:google_design_system/google_design_system.dart';
 
 class GoogleBody extends StatelessWidget {
@@ -11,36 +10,36 @@ class GoogleBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return material.Padding(
-      padding: const material.EdgeInsets.fromLTRB(14, 0, 14, 4),
-      child: material.Card(
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(14, 0, 14, 4),
+      child: Card(
         elevation: 0,
         color: GoogleLightColors.bodyColor,
-        child: material.Padding(
+        child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 18),
-          child: material.Column(
+          child: Column(
             children: [
-              material.Row(
+              Row(
                 children: [
-                  const material.Spacer(),
-                  material.IconButton(
-                    icon: const material.Icon(
+                  const Spacer(),
+                  IconButton(
+                    icon: const Icon(
                       GoogleIcons.label_off_outlined,
                       size: 20,
                     ),
                     onPressed: () {},
                   ),
-                  const material.SizedBox(width: 4),
-                  material.IconButton(
-                    icon: const material.Icon(
+                  const SizedBox(width: 4),
+                  IconButton(
+                    icon: const Icon(
                       GoogleIcons.backup_sharp,
                       size: 20,
                     ),
                     onPressed: () {},
                   ),
-                  const material.SizedBox(width: 4),
-                  material.IconButton(
-                    icon: const material.Icon(
+                  const SizedBox(width: 4),
+                  IconButton(
+                    icon: const Icon(
                       GoogleIcons.info_outline_rounded,
                       size: 20,
                     ),
@@ -48,8 +47,8 @@ class GoogleBody extends StatelessWidget {
                   ),
                 ],
               ),
-              const material.SizedBox(height: 24),
-              material.Expanded(
+              const SizedBox(height: 24),
+              Expanded(
                 child: ListView(
                   children: bodyTileList.map((element) => element).toList(),
                 ),
