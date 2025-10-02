@@ -1,21 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:google_design_system/google_design_system.dart';
 
-class GoogleAvatarButton extends FloatingActionButton {
-  GoogleAvatarButton({
+class GoogleAvatarButton extends StatelessWidget {
+  const GoogleAvatarButton({
     super.key,
-  }) : super(
-          backgroundColor: GoogleLightColors.canvasColor,
-          shape: const CircleBorder(),
-          elevation: 0,
-          hoverElevation: 3,
-          onPressed: () {},
-          child: const CircleAvatar(
-            backgroundColor: GoogleLightColors.canvasColor,
-            backgroundImage: AssetImage(
-              'assets/images/avatar_picture.png',
-              package: 'google_design_system',
-            ),
-          ),
-        );
+    this.onPressed,
+    this.backgroundColor,
+    this.elevation,
+    this.hoverElevation,
+  });
+
+  final VoidCallback? onPressed;
+  final Color? backgroundColor;
+  final double? elevation;
+  final double? hoverElevation;
+
+  @override
+  Widget build(BuildContext context) {
+    return FloatingActionButton(
+      backgroundColor: backgroundColor ?? GoogleLightColors.canvasColor,
+      shape: const CircleBorder(),
+      elevation: elevation ?? 0,
+      hoverElevation: hoverElevation ?? 3,
+      onPressed: onPressed ?? () {},
+      child: const CircleAvatar(
+        backgroundColor: GoogleLightColors.canvasColor,
+        backgroundImage: AssetImage(
+          'assets/images/avatar_picture.png',
+          package: 'google_design_system',
+        ),
+      ),
+    );
+  }
 }
