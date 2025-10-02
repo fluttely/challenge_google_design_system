@@ -1,6 +1,5 @@
 import 'package:google_core/google_core.dart';
-
-import '../models/models.dart';
+import 'package:google_drive/main.dart';
 
 class MockFoldersData {
   static final List<FolderModel> _baseFolders = [
@@ -34,7 +33,7 @@ class MockFoldersData {
     final folders = List<FolderModel>.from(_baseFolders);
 
     // Adiciona 20 pastas mockadas
-    for (int i = 0; i < 20; i++) {
+    for (var i = 0; i < 20; i++) {
       folders.add(
         FolderModel(
           folderName: 'Lorem $i',

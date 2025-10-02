@@ -1,6 +1,5 @@
 import 'package:google_core/google_core.dart';
-
-import '../models/models.dart';
+import 'package:google_mail/main.dart';
 
 class MockInboxData {
   static final List<InboxTileModel> _baseInboxItems = [
@@ -38,7 +37,7 @@ class MockInboxData {
     final inbox = List<InboxTileModel>.from(_baseInboxItems);
 
     // Adiciona 20 emails mockados
-    for (int i = 0; i < 20; i++) {
+    for (var i = 0; i < 20; i++) {
       inbox.add(
         InboxTileModel(
           subject: 'Amet $i',

@@ -11,6 +11,7 @@ class GoogleDriveBodyTile extends StatelessWidget {
     required this.folderSizeFormatted,
     super.key,
   });
+
   final bool isShared;
   final bool isSelected;
   final String folderName;

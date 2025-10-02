@@ -6,6 +6,7 @@ class GoogleBody extends StatelessWidget {
     required this.bodyTileList,
     super.key,
   });
+
   final List<Widget> bodyTileList;
 
   @override

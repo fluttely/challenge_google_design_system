@@ -9,6 +9,7 @@ class GoogleMailBodyTile extends StatelessWidget {
     required this.starred,
     super.key,
   });
+
   final String subject;
   final String description;
   final String dateFormatted;

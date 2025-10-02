@@ -1,5 +1,5 @@
 import 'package:google_core/google_core.dart';
-import 'package:google_keep/google_keep.dart';
+import 'package:google_keep/main.dart';
 
 class MockNotesData {
   static final List<NoteModel> _baseNotes = [
@@ -33,7 +33,7 @@ class MockNotesData {
     final notes = List<NoteModel>.from(_baseNotes);
 
     // Adiciona 20 notas mockadas
-    for (int i = 0; i < 20; i++) {
+    for (var i = 0; i < 20; i++) {
       notes.add(
         NoteModel(
           noteName: 'Note $i',

@@ -1,16 +1,16 @@
 import 'package:flutter/widgets.dart';
 import 'package:google_design_system/google_design_system.dart';
-import 'package:google_keep/google_keep.dart';
+import 'package:google_keep/main.dart';
 
 class KeepHomePage extends StatelessWidget {
-  final List<NoteModel> notes;
-  final List<LeftSideBarTileModel> menuItems;
-
   const KeepHomePage({
-    super.key,
     required this.notes,
     required this.menuItems,
+    super.key,
   });
+
+  final List<NoteModel> notes;
+  final List<LeftSideBarTileModel> menuItems;
 
   @override
   Widget build(BuildContext context) {

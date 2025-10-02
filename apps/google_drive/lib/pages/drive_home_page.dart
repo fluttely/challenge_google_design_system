@@ -1,16 +1,16 @@
 import 'package:flutter/widgets.dart';
 import 'package:google_design_system/google_design_system.dart';
-import 'package:google_drive/google_drive.dart';
+import 'package:google_drive/main.dart';
 
 class DriveHomePage extends StatelessWidget {
-  final List<FolderModel> folders;
-  final List<LeftSideBarTileModel> menuItems;
-
   const DriveHomePage({
-    super.key,
     required this.folders,
     required this.menuItems,
+    super.key,
   });
+
+  final List<FolderModel> folders;
+  final List<LeftSideBarTileModel> menuItems;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,6 @@ class DriveHomePage extends StatelessWidget {
           backgroundColor: GoogleLightColors.bodyColor,
         ),
         leftSideBarTileList: menuItems,
-        tileType: GoogleLeftSideBarTileType.small,
       ),
       bodyTileList: folders
           .map(

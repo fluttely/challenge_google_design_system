@@ -1,6 +1,10 @@
 import 'package:google_design_system/google_design_system.dart';
 
+export 'foundation/components/atoms/atoms.dart';
 export 'foundation/components/google_components.dart';
+export 'foundation/components/molecules/molecules.dart';
+export 'foundation/components/organisms/organisms.dart';
+export 'foundation/components/templates/templates.dart';
 export 'foundation/theme/core/components/google_app_bar_theme.dart';
 export 'foundation/theme/core/google_icons.dart';
 export 'foundation/theme/dark/google_dark_colors.dart';

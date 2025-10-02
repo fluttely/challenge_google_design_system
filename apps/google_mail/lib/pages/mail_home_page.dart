@@ -1,16 +1,16 @@
 import 'package:flutter/widgets.dart';
 import 'package:google_design_system/google_design_system.dart';
-import 'package:google_mail/google_mail.dart';
+import 'package:google_mail/main.dart';
 
 class MailHomePage extends StatelessWidget {
-  final List<InboxTileModel> inboxItems;
-  final List<LeftSideBarTileModel> menuItems;
-
   const MailHomePage({
-    super.key,
     required this.inboxItems,
     required this.menuItems,
+    super.key,
   });
+
+  final List<InboxTileModel> inboxItems;
+  final List<LeftSideBarTileModel> menuItems;
 
   @override
   Widget build(BuildContext context) {
@@ -26,16 +26,17 @@ class MailHomePage extends StatelessWidget {
           icon: GoogleIcons.edit_outlined,
           label: 'Compose',
         ),
-        tileType: GoogleLeftSideBarTileType.small,
         leftSideBarTileList: menuItems,
       ),
       bodyTileList: inboxItems
-          .map((element) => GoogleMailBodyTile(
-                subject: element.subject,
-                description: element.description,
-                starred: element.starred,
-                dateFormatted: element.sendedDate.year.toString(),
-              ))
+          .map(
+            (element) => GoogleMailBodyTile(
+              subject: element.subject,
+              description: element.description,
+              starred: element.starred,
+              dateFormatted: element.sendedDate.year.toString(),
+            ),
+          )
           .toList(),
     );
   }

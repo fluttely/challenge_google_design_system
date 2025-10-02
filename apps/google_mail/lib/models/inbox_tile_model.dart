@@ -1,13 +1,6 @@
 import 'package:google_core/google_core.dart';
 
 class InboxTileModel {
-  final bool starred;
-  final UserModel senderData;
-  final UserModel receiverData;
-  final DateTime sendedDate;
-  final String subject;
-  final String description;
-
   InboxTileModel({
     required this.starred,
     required this.senderData,
@@ -16,4 +9,11 @@ class InboxTileModel {
     required this.subject,
     required this.description,
   });
+
+  final bool starred;
+  final UserModel senderData;
+  final UserModel receiverData;
+  final DateTime sendedDate;
+  final String subject;
+  final String description;
 }
