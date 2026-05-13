@@ -20,9 +20,11 @@ class GoogleAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = GoogleTheme.of(context).colors;
+
     return AppBar(
       toolbarHeight: 64,
-      backgroundColor: GoogleLightColors.canvasColor,
+      backgroundColor: colors.canvasColor,
       leadingWidth: 216,
       titleSpacing: 0,
       leading: Row(
@@ -42,10 +44,10 @@ class GoogleAppBar extends StatelessWidget implements PreferredSizeWidget {
           viewElevation: 0,
           barElevation: WidgetStateProperty.all(0),
           barBackgroundColor: WidgetStateProperty.all(
-            GoogleLightColors.searchAnchorBarColor,
+            colors.searchAnchorBarColor,
           ),
           barHintText: barHintText,
-          viewBackgroundColor: GoogleLightColors.bodyColor,
+          viewBackgroundColor: colors.bodyColor,
           suggestionsBuilder: (context, controller) {
             return List.generate(
               6,
@@ -94,8 +96,8 @@ class GoogleAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
           child: Container(
             padding: const EdgeInsets.all(2),
-            decoration: const BoxDecoration(
-              color: GoogleLightColors.bodyColor,
+            decoration: BoxDecoration(
+              color: colors.bodyColor,
               shape: BoxShape.circle,
             ),
             child: const GoogleAvatarButton(),

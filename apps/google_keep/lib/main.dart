@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:google_core/google_core.dart';
+import 'package:google_design_system/google_design_system.dart';
 import 'package:google_keep/main.dart';
 
 export 'data/keep_menu_data.dart';
@@ -11,6 +12,7 @@ void main() {
   runApp(
     GoogleApp(
       title: 'Google Keep',
+      themeData: GoogleThemeData(colors: GoogleLightColors()),
       home: KeepHomePage(
         notes: MockNotesData.notesList,
         menuItems: KeepMenuData.leftSideBarTileList,

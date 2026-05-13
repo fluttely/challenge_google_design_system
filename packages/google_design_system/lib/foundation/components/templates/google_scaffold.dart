@@ -21,8 +21,10 @@ class GoogleScaffold extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = GoogleTheme.of(context).colors;
+
     return Scaffold(
-      backgroundColor: GoogleLightColors.canvasColor,
+      backgroundColor: colors.canvasColor,
       appBar: GoogleAppBar(
         image: SizedBox(height: 40, child: logo),
         title: title,

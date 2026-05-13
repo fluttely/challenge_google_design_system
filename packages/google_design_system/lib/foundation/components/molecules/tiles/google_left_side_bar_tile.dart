@@ -27,6 +27,7 @@ class _GoogleLeftSideBarTileState extends State<GoogleLeftSideBarTile> {
 
   @override
   Widget build(BuildContext context) {
+    final colors = GoogleTheme.of(context).colors;
     final tileType = widget.tileType;
 
     return InkWell(
@@ -48,7 +49,7 @@ class _GoogleLeftSideBarTileState extends State<GoogleLeftSideBarTile> {
             topRight: const Radius.circular(16),
             bottomRight: const Radius.circular(16),
           ),
-          color: isSelected ? GoogleLightColors.seedColor : null,
+          color: isSelected ? colors.seedColor : null,
         ),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
         child: Row(

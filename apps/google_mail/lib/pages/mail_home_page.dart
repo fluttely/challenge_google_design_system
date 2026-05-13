@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:google_core/google_core.dart';
 import 'package:google_design_system/google_design_system.dart';
 import 'package:google_mail/main.dart';
 
@@ -14,6 +15,8 @@ class MailHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = GoogleTheme.of(context).colors;
+
     return GoogleScaffold(
       logo: Image.asset('assets/images/google_gmail_logo.png'),
       title: 'Gmail',
@@ -21,7 +24,7 @@ class MailHomePage extends StatelessWidget {
       leftSideBar: GoogleLeftSideBar(
         floatingActionButton: GoogleFloatingActionButton.extended(
           elevation: 0,
-          backgroundColor: GoogleLightColors.seedColor,
+          backgroundColor: theme.colors.seedColor,
           onPressed: () {},
           icon: GoogleIcons.edit_outlined,
           label: 'Compose',

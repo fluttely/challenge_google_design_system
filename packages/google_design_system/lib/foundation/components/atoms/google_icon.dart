@@ -18,9 +18,11 @@ class GoogleIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = GoogleTheme.of(context).colors;
+
     return Icon(
       icon,
-      color: color ?? GoogleLightColors.iconColor,
+      color: color ?? colors.iconColor,
       size: size ?? 20,
     );
   }

@@ -14,6 +14,8 @@ class DriveHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = GoogleTheme.of(context).colors;
+
     return GoogleScaffold(
       logo: Image.asset('assets/images/google_drive_logo.png'),
       title: 'Drive',
@@ -23,7 +25,7 @@ class DriveHomePage extends StatelessWidget {
           onPressed: () {},
           label: 'New',
           icon: GoogleIcons.add,
-          backgroundColor: GoogleLightColors.bodyColor,
+          backgroundColor: colors.bodyColor,
         ),
         leftSideBarTileList: menuItems,
       ),

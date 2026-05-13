@@ -27,6 +27,8 @@ class GoogleLeftSideBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = GoogleTheme.of(context).colors;
+
     return Container(
       width: 216, // TODO(Kevin): change this value
       padding: EdgeInsets.fromLTRB(

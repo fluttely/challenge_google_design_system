@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:google_core/google_core.dart';
+import 'package:google_design_system/google_design_system.dart';
 import 'package:google_drive/main.dart';
 
 export 'data/drive_menu_data.dart';
@@ -11,6 +12,7 @@ void main() {
   runApp(
     GoogleApp(
       title: 'Google Drive',
+      themeData: GoogleThemeData(colors: GoogleLightColors()),
       home: DriveHomePage(
         folders: MockFoldersData.foldersList,
         menuItems: DriveMenuData.leftSideBarTileList,

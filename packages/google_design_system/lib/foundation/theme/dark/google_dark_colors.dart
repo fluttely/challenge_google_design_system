@@ -1,3 +1,0 @@
-class GoogleDarkColors {
-  const GoogleDarkColors();
-}

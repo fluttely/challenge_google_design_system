@@ -17,14 +17,16 @@ class GoogleMailBodyTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = GoogleTheme.of(context).colors;
+
     return ListTile(
-      shape: const Border.symmetric(
+      shape: Border.symmetric(
         horizontal: BorderSide(
-          color: GoogleLightColors.lineColor,
+          color: colors.lineColor,
           width: 0.5,
         ),
       ),
-      tileColor: GoogleLightColors.bodyColor,
+      tileColor: colors.bodyColor,
       contentPadding: const EdgeInsets.symmetric(horizontal: 18),
       dense: true,
       title: Column(

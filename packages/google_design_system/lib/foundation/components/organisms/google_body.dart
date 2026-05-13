@@ -11,11 +11,13 @@ class GoogleBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = GoogleTheme.of(context).colors;
+
     return Padding(
       padding: const EdgeInsets.fromLTRB(14, 0, 14, 4),
       child: Card(
         elevation: 0,
-        color: GoogleLightColors.bodyColor,
+        color: colors.bodyColor,
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 18),
           child: Column(

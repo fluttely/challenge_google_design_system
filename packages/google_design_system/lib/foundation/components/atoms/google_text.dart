@@ -11,12 +11,14 @@ class GoogleText extends StatelessWidget {
     this.overflow,
   });
 
-  factory GoogleText.titleLarge(String data) => GoogleText(
-        data,
-        fontColor: GoogleLightColors.titleLargeColor,
-        fontSize: 22,
-        fontWeight: FontWeight.w400,
-      );
+  factory GoogleText.titleLarge(String data) {
+    return GoogleText(
+      data,
+      fontColor: GoogleTheme.of(context).colors.titleLargeColor,
+      fontSize: 22,
+      fontWeight: FontWeight.w400,
+    );
+  }
 
   final String data;
   final Color? fontColor;
@@ -26,11 +28,13 @@ class GoogleText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = GoogleTheme.of(context).colors;
+
     return Text(
       data,
       style: TextStyle(
         overflow: overflow ?? TextOverflow.ellipsis,
-        color: fontColor ?? GoogleLightColors.textColor,
+        color: fontColor ?? colors.textColor,
         fontSize: fontSize ?? 14,
         fontWeight: fontWeight ?? FontWeight.w300,
       ),

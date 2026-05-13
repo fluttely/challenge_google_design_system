@@ -17,14 +17,16 @@ class GoogleAvatarButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = GoogleTheme.of(context).colors;
+
     return FloatingActionButton(
-      backgroundColor: backgroundColor ?? GoogleLightColors.canvasColor,
+      backgroundColor: backgroundColor ?? colors.canvasColor,
       shape: const CircleBorder(),
       elevation: elevation ?? 0,
       hoverElevation: hoverElevation ?? 3,
       onPressed: onPressed ?? () {},
-      child: const CircleAvatar(
-        backgroundColor: GoogleLightColors.canvasColor,
+      child: CircleAvatar(
+        backgroundColor: colors.canvasColor,
         backgroundImage: AssetImage(
           'assets/images/avatar_picture.png',
           package: 'google_design_system',

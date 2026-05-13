@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:google_core/google_core.dart';
 import 'package:google_design_system/google_design_system.dart';
 import 'package:google_keep/main.dart';
 
@@ -14,6 +15,8 @@ class KeepHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = GoogleTheme.of(context).colors;
+
     return GoogleScaffold(
       logo: Image.asset('assets/images/google_keep_logo.png'),
       title: 'Keep',
@@ -24,7 +27,7 @@ class KeepHomePage extends StatelessWidget {
           onPressed: () {},
           label: 'New',
           icon: GoogleIcons.add,
-          backgroundColor: GoogleLightColors.bodyColor,
+          backgroundColor: theme.colors.bodyColor,
         ),
         leftSideBarTileList: menuItems,
         tileType: GoogleLeftSideBarTileType.big,
